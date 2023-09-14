@@ -1,0 +1,20 @@
+{
+  "web": {
+    "client_id": "982252528827-br94t6f63u80ep5v749ck4mg7ucvj2na.apps.googleusercontent.com",
+    "project_id": "icara-app",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_secret": "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",
+    "redirect_uris": [
+      "http://localhost:3000/oauth2callback",
+      "https://icara-app.firebaseapp.com/__/auth/handler"
+    ],
+    "javascript_origins": [
+      "http://localhost",
+      "http://localhost:3000",
+      "https://icara-app.firebaseapp.com",
+      "https://icara.web.app"
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "projects": {
+    "default": "icara-app"
+  },
+  "targets": {
+    "icara-app": {
+      "hosting": {
+        "app": [
+          "icara-app"
+        ],
+        "site": [
+          "icara"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
