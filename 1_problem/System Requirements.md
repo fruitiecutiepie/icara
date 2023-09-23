@@ -132,6 +132,39 @@ This is the default value, but let users customise this! Will be fun, don't you 
 
 > Emotional products are driven by feelings. They should be easy to process. Don't sell the technical details. Sell the experience.[^1]
 
+Another feature consideration/reiteration after actually conducting market research:
+
+Skin profile: Concerns, type, goals, phototype
+Avg price from all users and given the same size, can compare price differences with products that have the same ingredients
+Skin changes trigger, what triggers what?
+Skin changes log - daily photos? But don’t store as single photos, and user can’t edit, take only one photo/day, give a face/photo position guideline, Make a timelapse, if you can make this using biometric face scanning, 💯
+
+Scanning barcode is a must-have. This is possible. Multiple apps have proven this.
+
+Expect millions of product records
+
+We have community and personal brands
+
+Hmm people seem to like to rate their skin every day? 😂 well, we can do something like a checklist to do app every day on widget so that it’s easy to log in
+
+So we can make daily photos and rating for skin conditions and concerns 😂
+
+Skipped skincare routine tick mark! Interesting, can show analytics
+
+Ofc, skincare routine will automatically tell users if some ingredients clashes, this is considering morning/night routine, and even per day basis (exfoliator is a good use case / example for this)
+
+Ofc, the initial database come preloaded with well-known brands
+
+Wow, Wishlist items can also be listed as options in user’s routine, so users can visualise their routine with that item, and also it can act as a reminder for them! Or we can remind them, idk 
+
+Why do users find these useful? Because ultimately, they spent effort, time, energy, and money to these products. They want to know if it’s worth it. If we can help users maximise their cost-gain ratio, then it’s within their own best interest to download our app. This is the underlying motive.
+
+> DON’T MAKE IT COMPLICATED. MAKE IT SIMPLE. DON’T GET IN THE WAY OF USER’S ROUTINE. COMPLEMENT THEM. DON’T DISRUPT THEIR DAY.
+
+Hmm, I think desktop app or at least web is necessary. Mobile is too impractical. I hate it. Screen real-estate is too small. At least it seems to be, or competitors' UX just suck. They seem too complicated. Sometimes they use too much "smooth" motion. I hate it. I just want to get things done. Fast. As fast as I can. And they promote their app at every chance they get. I hate it. Stop it please. If I like your app and genuinely think your extra feature is worth it, I'll check it out myself. I promise. You don't need to remind me. I just need to know what else you offer. I don't get amnesia at every screen change.
+
+Let the retailers do the work to convince users that their products are best for users (you don’t need to compete with them). Don’t add to users’ confusion. Just add their products, whatever they got it for, whether or not it’s any good; they already have it. Your app's job is to make user’s life easier. Focus on your job and do it well.
+
 ## Non-functional requirements
 
 [^1]: [Newsletter | Science backlash effect | September 1, 2023](https://nickkolenda.com/newsletter/2023-09-01)

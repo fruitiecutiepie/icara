@@ -76,7 +76,7 @@ exports.addEmailToSheets = functions.https.onRequest(async (req: any, res: any) 
       insertDataOption: 'INSERT_ROWS',
       requestBody: { values }
     });
-     
+    
     functions.logger.info("New record added");
     res.status(200).send('New record added.');
   } catch (error) {
