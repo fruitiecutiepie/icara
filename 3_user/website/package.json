@@ -1,12 +1,13 @@
 {
-  "name": "site",
+  "name": "website",
   "version": "0.0.0",
   "description": "The landing page for Icara. Sign up for early access.",
   "scripts": {
     "start": "vite",
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "firebase emulators:start --only hosting:website",
+    "deploy": "firebase deploy --only hosting:website"
   },
   "license": "MIT",
   "devDependencies": {

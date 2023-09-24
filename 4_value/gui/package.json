@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "firebase emulators:start --only hosting:app",
+    "deploy": "firebase deploy --only hosting:app"
   },
   "license": "MIT",
   "devDependencies": {

@@ -17,7 +17,7 @@
   "hosting": [
     {
       "target": "app",
-      "public": "./4_value/backend/gui/dist",
+      "public": "./4_value/gui/dist",
       "ignore": [
         "firebase.json",
         "**/.*",
@@ -50,6 +50,10 @@
       "trailingSlash": false
     }
   ],
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
   "emulators": {
     "functions": {
       "port": 5001
@@ -64,9 +68,5 @@
       "enabled": true
     },
     "singleProjectMode": true
-  },
-  "firestore": {
-    "rules": "firestore.rules",
-    "indexes": "firestore.indexes.json"
   }
 }
