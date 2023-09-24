@@ -22,3 +22,16 @@ const App: Component = () => {
 };
 
 export default App;
+
+import { initializeApp } from 'firebase/app';
+import { getFirestore, doc, setDoc, connectFirestoreEmulator } from 'firebase/firestore';
+import firebaseConfig from '../../../2_admin/security/keys/firebase_config.json'
+
+const firebaseApp = initializeApp(firebaseConfig);
+const db = getFirestore(firebaseApp);
+
+connectFirestoreEmulator(db, 'localhost', 8080);
+
+const docRef = doc(db, "users", "alovelace");
+
+console.log('Hello from db/index.ts')
