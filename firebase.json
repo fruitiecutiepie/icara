@@ -1,7 +1,7 @@
 {
   "functions": [
     {
-      "source": "backend/functions",
+      "source": "./4_value/backend/functions",
       "codebase": "default",
       "ignore": [
         "node_modules",
@@ -14,23 +14,42 @@
       ]
     }
   ],
-  "hosting": {
-    "target": "site",
-    "public": "site/dist",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
-    ],
-    "cleanUrls": true,
-    "trailingSlash": false
-  },
+  "hosting": [
+    {
+      "target": "app",
+      "public": "./4_value/backend/gui/dist",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "cleanUrls": true,
+      "trailingSlash": false
+    },
+    {
+      "target": "website",
+      "public": "./3_user/website/dist",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "cleanUrls": true,
+      "trailingSlash": false
+    }
+  ],
   "emulators": {
     "functions": {
       "port": 5001

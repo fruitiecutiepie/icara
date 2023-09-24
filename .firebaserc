@@ -8,7 +8,7 @@
         "app": [
           "icara-app"
         ],
-        "site": [
+        "website": [
           "icara"
         ]
       }

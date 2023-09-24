@@ -13,4 +13,6 @@ Sans: Work Sans
 
 ## Colours
 
+Will be inspired by human and skin. Light mode will probably have light skin colour as the background, and vice versa -> inclusivity hahahahahahaha.
+
 > [!TODO]
