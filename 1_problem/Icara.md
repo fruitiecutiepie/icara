@@ -148,8 +148,9 @@ Store skincare (singleton) requirements:
 12. Variant (default: Original)
 	1. Scents: unscented, eucalyptus, etc.
 	2. Shades: brown, black, etc.
-	3. Texture: glow, matte, satin, etc.
+	3. Texture: glow, matte, satin, etc. 
 	4. Size: mini, regular, value, etc.
+	5. Finish: Glitter, Gloss, Metallic, Sheer; Matte, Creams, Powders, Dewy; Glow, Wet, Satin
 13. Category (subcategory: toner, moisturiser etc., within category: skincare, makeup, tools, perfume)
 14. Purchase price (fetched from history, in a form of graph to show analytics, can be free ($0), spending & item price analytics)
 	1. If price == 0, the item is gifted

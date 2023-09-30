@@ -85,6 +85,9 @@ Recommend ingredients/routine based on Profile. Have a profile page, something l
 
 Beautypedia with mini info icon on labels, or Did you know?-s or Fun fact of the day-s, e.g., physical vs chemical sunscreen, should I refrigerate items? (if it can oxidise, generally yes, otherwise no *need*, nevertheless follow the manufacturer instructions.)
 
+[Will I get an allergy from cosmetics?](https://www.thefactsabout.co.uk/allergies)
+[What are the sunscreen protection levels?](https://www.thefactsabout.co.uk/sunscreen-protection-levels)
+
 > [!QUESTION] Hmm, should Type has its own table?
 
 Best of Beauty -> Awards every year, recap, analytics, sort of like Spotify.
@@ -117,6 +120,8 @@ Can also build a user's persona around the products they use -> clean makeup, fr
 > In-house female "authorities" provide protection for same-kind or kin or lower-power females, so in this sense, having a network of friends would support/benefit/makes sense. We'll try to explore this more.
 
 > [!QUESTION] How strict should expiry date / period-after-opening be followed? Are they faked? How real are them?
+> [Shelf Life and Expiration Dating of Cosmetics | FDA](https://www.fda.gov/cosmetics/cosmetics-labeling/shelf-life-and-expiration-dating-cosmetics)
+> [Cosmetics Safety Q&A: Shelf Life | FDA](https://www.fda.gov/cosmetics/resources-consumers-cosmetics/cosmetics-safety-qa-shelf-life)
 
 > [!QUESTION] Are subcategories fixed? Can user add more subcategories?
 > There will always be more subcategories. The most granular value, will ultimately be each product itself. Because you can argue that each product is unique within itself. The question is: how granular should you be? Should figure out a balance that don't confuse users. Make a framework that's easy to understand, like Liam's self tech interface.
@@ -164,6 +169,12 @@ Why do users find these useful? Because ultimately, they spent effort, time, ene
 Hmm, I think desktop app or at least web is necessary. Mobile is too impractical. I hate it. Screen real-estate is too small. At least it seems to be, or competitors' UX just suck. They seem too complicated. Sometimes they use too much "smooth" motion. I hate it. I just want to get things done. Fast. As fast as I can. And they promote their app at every chance they get. I hate it. Stop it please. If I like your app and genuinely think your extra feature is worth it, I'll check it out myself. I promise. You don't need to remind me. I just need to know what else you offer. I don't get amnesia at every screen change.
 
 Let the retailers do the work to convince users that their products are best for users (you don’t need to compete with them). Don’t add to users’ confusion. Just add their products, whatever they got it for, whether or not it’s any good; they already have it. Your app's job is to make user’s life easier. Focus on your job and do it well.
+
+---
+
+Add products with text recognition
+How do beauty influencers store their cosmetics / keep them organised?
+How can I get the hex colour of something accurately?
 
 ## Non-functional requirements
 

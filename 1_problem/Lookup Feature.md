@@ -1,0 +1,9 @@
+# Lookup Feature
+
+## How You Will Make it Work
+So you can look up items based on their UPC, which you get from scanning barcodes. Try to implement the scanning yourself if possible, shouldn't be too much of a hassle. Most cosmetics barcodes seem to be of type EAN-13 with 12 symbol count, which means the first 8 digit is going to be the company's unique digit, and the rest is the items. This is how you will differentiate different company products and keep them consistent. You don't have the UPC item correlation database, but you're going to use Google Search API and implement an ML model or some kind to determine which word comes up the most. You'll need a way to differentiate brand names from item names as well, maybe this can be done by looking up in the brand database worldwide if the names are registered. This shouldn't be too critical either, as you can edit records manually or let users edit them manually and brand name ID will be their first 8 digits from the barcodes anyway. This can work cross-way as well if the user doesn't have the barcode to scan, so you query by name. If the name doesn't exist already, just use cuid() and put the brand in the brand relay database. But also, you'll build your database with user input over time. I'm still not sure what information you can get from being able to read SKU or the lot number in items, but if it's too hard to implement or doesn't provide much benefit, you should not implement it because users will only care about expiration date anyway, which will almost always be present with barcodes, which means users can look it up themselves easily.
+
+## References
+[[Barcodes]]
+[[UPC]]
+[[Brand]]

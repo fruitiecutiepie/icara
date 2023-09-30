@@ -6,10 +6,10 @@ The list must:
 1. Provide a clean, straightforward, and streamlined structure
 2. Help users quickly identify where to find products based on their intended use
 3. Avoid unnecessary complexity and excessive fragmentation
-4. Balance specificity with simplicity to create a user-friendly and effective categorization system
+4. Balance specificity with simplicity to create a user-friendly and effective categorisation system
 5. Provide a better user experience
 6. Have an intuitive flow, demonstrated by the order of sections and each item in the sections
-7. Be easy to navigate into and switched between (UI/UX)
+7. Be easy to navigate into and be switched between (UI/UX)
 
 THE DEFINITIVE LIST:
 1. Skincare

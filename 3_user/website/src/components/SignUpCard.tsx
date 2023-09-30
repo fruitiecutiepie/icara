@@ -4,7 +4,8 @@ export default function SignUpCard() {
   const [isRegistered, setIsRegistered] = createSignal(false);
   const [isRegistering, setIsRegistering] = createSignal(false);
 
-  const registerEmail = async () => {
+  const registerEmail = async (e) => {
+    e.preventDefault();
     const emailInput = document.getElementById('email') as HTMLInputElement;
     const fullNameInput = document.getElementById('full_name') as HTMLInputElement;
     const email = emailInput.value.trim().toLowerCase();
@@ -65,7 +66,7 @@ export default function SignUpCard() {
           )}
         </div>
         <div class="flex flex-col items-center">
-          <button type="button" onClick={registerEmail}
+          <button type="submit" onClick={registerEmail}
             class="rounded-md mt-1 py-3 px-5 w-min text-white text-sm hover:bg-neutral-600 transition duration-300 bg-red-600"
           >
             Register

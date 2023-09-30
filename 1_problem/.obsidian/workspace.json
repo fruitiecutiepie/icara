@@ -4,18 +4,47 @@
     "type": "split",
     "children": [
       {
-        "id": "66b9737e778eaf97",
+        "id": "58c286f8c17bea2c",
         "type": "tabs",
         "children": [
           {
-            "id": "b58e2d2455916513",
+            "id": "7534ecf4b4b61310",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "References.md",
+                "mode": "preview",
+                "source": true
+              }
+            }
+          },
+          {
+            "id": "5a594a28388866ca",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Icara.md",
+                "mode": "source",
+                "source": true
+              }
+            }
+          },
+          {
+            "id": "91b81ab342a89d93",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Lookup Feature.md",
+                "mode": "preview",
+                "source": true
+              }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -44,7 +73,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "texture",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -61,7 +90,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -81,6 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Icara.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Icara.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +150,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Icara.md"
+              }
             }
           },
           {
@@ -161,22 +195,30 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "b58e2d2455916513",
+  "active": "5a594a28388866ca",
   "lastOpenFiles": [
-    "Tips of the Day.md",
-    "Competitor.md",
-    "Brand Philosophy.md",
     "System Requirements.md",
-    "Brand Values.md",
+    "References.md",
+    "Lookup Feature.md",
+    "Barcodes.md",
+    "Competitor.md",
+    "diagrams/ERD.drawio",
+    "Item Categories.md",
     "Historical Practices.md",
+    "attachments/Pasted image 20230927204333.png",
+    "Pasted image 20230927204150.png",
+    "attachments",
+    "Pasted image 20230927204320.png",
+    "Icara.md",
+    "newfile",
+    "Tips of the Day.md",
+    "Brand Philosophy.md",
+    "Brand Values.md",
     "Glossary of Terms.md",
     "Database Design.md",
     "Design System.md",
-    "diagrams/ERD.drawio",
-    "Icara.md",
     "Design System",
     "Business Plan.md",
-    "Item Categories.md",
     "Core Values.md",
     "The Name.md",
     "diagrams/ItemStateChart.drawio",
@@ -188,8 +230,6 @@
     "untitled folder",
     "ERD.drawio",
     "assets/icon.ai",
-    "assets/2x",
-    "assets",
     "User Guides.md",
     "User Guides for Item Categories.md"
   ]
