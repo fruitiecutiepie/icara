@@ -3,6 +3,7 @@ import { Routes, Route, A } from '@solidjs/router';
 import Home from './pages/Home';
 import About from './pages/About';
 import Profile from './pages/Profile';
+import NewItem from './pages/NewItem';
 
 const App: Component = () => {
   return (
@@ -11,27 +12,16 @@ const App: Component = () => {
         <A href="/">Home</A>
         <A href="/about">About</A>
         <A href="/profile">Profile</A>
+        <A href="/item/new">New Item</A>
       </nav>
       <Routes>
         <Route path="/" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/profile" component={Profile} />
+        <Route path="/item/new" component={NewItem} />
       </Routes>
     </div>
   );
 };
 
 export default App;
-
-import { initializeApp } from 'firebase/app';
-import { getFirestore, doc, setDoc, connectFirestoreEmulator } from 'firebase/firestore';
-import firebaseConfig from '../../../2_admin/security/keys/firebase_config.json'
-
-const firebaseApp = initializeApp(firebaseConfig);
-const db = getFirestore(firebaseApp);
-
-connectFirestoreEmulator(db, 'localhost', 8080);
-
-const docRef = doc(db, "users", "alovelace");
-
-console.log('Hello from db/index.ts')
