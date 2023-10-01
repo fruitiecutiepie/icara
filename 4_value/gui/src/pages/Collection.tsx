@@ -1,4 +1,4 @@
-export default function Analytics() {
+export default function Collection() {
   return (
     <div
       class="px-10 pt-12"
@@ -9,13 +9,16 @@ export default function Analytics() {
         <h2
           class="text-xl font-bold"
         >
-          Analytics
+          Collection
         </h2>
         <div
           class="space-x-6"
         >
           <button type="button" class="material-symbols-outlined select-none">
-            settings
+            archive
+          </button>
+          <button type="button" class="material-symbols-outlined select-none">
+            inventory_2
           </button>
         </div>
       </div>

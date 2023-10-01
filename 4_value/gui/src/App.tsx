@@ -6,7 +6,7 @@ import TabButton from './components/TabButton';
 
 import Home from './pages/Home';
 import Routine from './pages/Routine';
-import New from './pages/New';
+import Collection from './pages/Collection';
 import Scan from './pages/Scan'
 import Analytics from './pages/Analytics';
 import Profile from './pages/Profile';
@@ -23,11 +23,11 @@ const App: Component = () => {
             md:border-t-0 md:justify-end md:border-r md:top-0 md:bottom-auto md:overflow-y-auto md:h-full md:w-auto lg:w-1/4"
         >
           <div
-            class="flex justify-end md:flex-col md:space-y-12 md:justify-start md:items-center md:w-16 lg:w-52"
+            class="flex justify-end select-none md:flex-col md:space-y-12 md:justify-start md:items-center md:w-16 lg:w-52"
           >
-            <div class="mt-12 hidden w-full justify-center md:flex lg:justify-start">
+            <div class="pt-12 hidden w-full justify-center md:flex lg:justify-start">
               <A
-                href="/home"
+                href="/"
               >
                 <img src={logo} class="w-7 h-7" alt="logo" />
               </A>
@@ -38,7 +38,7 @@ const App: Component = () => {
             >
               <TabButton path="/home" icon="home" label="Home" noScroll />
               <TabButton path="/routine" icon="routine" label="Routine" noScroll />
-              <TabButton path="/new" icon="add_circle" label="Add" />
+              <TabButton path="/items/collection" icon="shelves" label="Items" />
               <TabButton path="/analytics" icon="analytics" label="Analytics" noScroll />
               <TabButton path="/profile" icon="person" label="Profile" />
             </nav>
@@ -46,13 +46,13 @@ const App: Component = () => {
         </div>
       )}
       <div
-        class="self-center h-screen w-screen md:w-1/2"
+      class="self-center h-screen w-screen md:w-3/5 lg:w-1/2 lg:border-r"
       >
         <div>
           <Routes>
             <Route path={["/", "/home"]} component={Home} />
             <Route path="/routine" component={Routine} />
-            <Route path="/new" component={New} />
+            <Route path="/items/collection" component={Collection} />
             <Route path="/scan" component={Scan} />
             <Route path="/analytics" component={Analytics} />
             <Route path="/profile" component={Profile} />

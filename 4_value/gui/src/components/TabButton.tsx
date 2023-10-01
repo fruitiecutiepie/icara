@@ -10,11 +10,11 @@ type Props = {
 
 export default function TabButton(props: Props) {
   const merged = mergeProps(props);
-
+  
   return (
     <A
       href={merged.path}
-      class="flex items-center justify-center lg:space-x-2 lg:justify-start w-full"
+      class="flex items-center justify-center lg:space-x-4 lg:justify-start w-full"
       activeClass="material-symbols-filled"
       {...(merged.noScroll ? { noScroll: true } : null)}
     >

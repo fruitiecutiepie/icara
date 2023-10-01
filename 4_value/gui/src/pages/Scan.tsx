@@ -1,5 +1,6 @@
-import { createSignal, onCleanup, onMount } from 'solid-js';
+import { Show, createSignal, onCleanup, onMount } from 'solid-js';
 import { BarcodeFormat, BrowserMultiFormatReader, DecodeHintType, NotFoundException } from '@zxing/library';
+import { Navigate } from '@solidjs/router';
 
 export default function Scan() {
   const [result, setResult] = createSignal("");
@@ -20,6 +21,7 @@ export default function Scan() {
 
     if (!videoInputDevices.length) {
       console.error('No video input devices found');
+      // TODO: Handle no camera better
       return;
     }
 
@@ -35,6 +37,7 @@ export default function Scan() {
       if (err && !(err instanceof NotFoundException)) {
         console.error(err);
       }
+      // TODO: Handle barcode format not supported
     });
 
   });
@@ -48,24 +51,26 @@ export default function Scan() {
   }
   
   return (
-    <div class="relative flex flex-col h-full justify-center items-center md:mt-32">
-      <video ref={setVideoElement} class="w-screen h-screen md:h-fit object-cover -scale-x-100 md:rounded-xl"></video>
-      <div
-        class="absolute flex w-full justify-between items-center top-0 p-12"
-      >
-        <button type="button" class="material-symbols-outlined text-white select-none" onClick={handleCloseClick}>
-          close
-        </button>
-        <h1
-          class="text-lg text-white select-none"
+    <Show when={!result()} fallback={<Navigate href={`/new/${result()}`} />}>
+      <div class="relative flex flex-col h-full justify-center items-center md:mt-32">
+        <video ref={setVideoElement} class="w-screen h-screen md:h-fit object-cover -scale-x-100 md:rounded-xl"></video>
+        <div
+          class="absolute flex w-full justify-between items-center top-0 px-10 pt-12"
         >
-          Scan Barcode
-        </h1>
-        <span class="material-symbols-outlined text-white invisible select-none">
-          close
-        </span>
+          <button type="button" class="material-symbols-outlined text-white select-none" onClick={handleCloseClick}>
+            close
+          </button>
+          <h2
+            class="text-xl font-bold text-white select-none"
+          >
+            Scan
+          </h2>
+          <span class="material-symbols-outlined text-white invisible select-none">
+            close
+          </span>
+        </div>
+        <div class="w-3/4 h-1/4 md:w-1/2 md:h-1/3 border-2 rounded-xl absolute"></div>
       </div>
-      <div class="w-3/4 h-1/4 md:w-1/2 md:h-1/3 border-2 rounded-xl absolute"></div>
-    </div>
+    </Show>
   );
 }

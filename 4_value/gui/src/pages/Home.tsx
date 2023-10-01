@@ -1,11 +1,24 @@
 export default function Home() {
   return (
-    <>
+    <div
+      class="px-10 pt-12"
+    >
       <div
-        class="px-5 py-10 pt-20"
+        class="flex w-full justify-between items-center"
       >
-        <h1>Welcome to your homepage!</h1>
+        <h2
+          class="text-xl font-bold"
+        >
+          Home
+        </h2>
+        <div
+          class="space-x-6"
+        >
+          <button type="button" class="material-symbols-outlined select-none">
+            notifications
+          </button>
+        </div>
       </div>
-    </>
+    </div>
   );
 }
