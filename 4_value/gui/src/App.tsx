@@ -1,26 +1,65 @@
 import type { Component } from 'solid-js';
 import { Routes, Route, A } from '@solidjs/router';
 import Home from './pages/Home';
-import About from './pages/About';
+import Routine from './pages/Routine';
+import New from './pages/New';
+import Analytics from './pages/Analytics';
 import Profile from './pages/Profile';
-import NewItem from './pages/NewItem';
 
 const App: Component = () => {
   return (
-    <div class="m-5">
-      <nav class="flex space-x-20 text-xl my-10 mt-20 justify-center">
-        <A href="/">Home</A>
-        <A href="/about">About</A>
-        <A href="/profile">Profile</A>
-        <A href="/item/new">New Item</A>
+    <>
+      <nav class="flex w-full h-14 fixed bottom-0 space-x-12 bg-white justify-center">
+        <A
+          href="/"
+          class="material-symbols-outlined self-center"
+          activeClass="material-symbols-filled"
+          noScroll
+        >
+          home
+        </A>
+        <A 
+          href="/routine" 
+          class="material-symbols-outlined self-center" 
+          activeClass="material-symbols-filled"
+          noScroll
+        >
+          routine
+        </A>
+        <A 
+          href="/new" 
+          class="material-symbols-outlined self-center" 
+          activeClass="material-symbols-filled"
+        >
+          add_circle
+        </A>
+        <A 
+          href="/analytics" 
+          class="material-symbols-outlined self-center" 
+          activeClass="material-symbols-filled"
+          noScroll
+        >
+          analytics
+        </A>
+        <A 
+          href="/profile" 
+          class="material-symbols-outlined self-center" 
+          activeClass="material-symbols-filled"
+          noScroll
+        >
+          person
+        </A>
       </nav>
-      <Routes>
-        <Route path="/" component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/profile" component={Profile} />
-        <Route path="/item/new" component={NewItem} />
-      </Routes>
-    </div>
+      <div class="m-5 my-10 mt-20">
+        <Routes>
+          <Route path="/" component={Home} />
+          <Route path="/routine" component={Routine} />
+          <Route path="/new" component={New} />
+          <Route path="/analytics" component={Analytics} />
+          <Route path="/profile" component={Profile} />
+        </Routes>
+      </div>
+    </>
   );
 };
 
