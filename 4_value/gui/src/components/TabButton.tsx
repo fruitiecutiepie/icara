@@ -24,7 +24,7 @@ export default function TabButton(props: Props) {
         {merged.icon}
       </span>
       <span
-        class="text-xl hidden lg:flex"
+        class="text-xl font-display hidden lg:flex"
       >
         {merged.label}
       </span>

@@ -1,6 +1,7 @@
 import { addDoc, collection } from "firebase/firestore";
 import { createResource, createSignal } from "solid-js";
 import db from "../../db";
+import TabHeading from "../components/TabHeading";
 
 export default function Routine() {
   const [name, setName] = createSignal("");
@@ -36,22 +37,7 @@ export default function Routine() {
     <div
       class="px-10 pt-12"
     >
-      <div
-        class="flex w-full justify-between items-center"
-      >
-        <h2
-          class="text-xl font-bold"
-        >
-          Routine
-        </h2>
-        <div
-          class="space-x-6"
-        >
-          <button type="button" class="material-symbols-outlined select-none">
-            settings
-          </button>
-        </div>
-      </div>
+      <TabHeading heading="Routine" icons={["settings"]} />
       <div
         class="flex flex-col w-full pt-9 pb-10 md:px-10 items-center"
       >

@@ -1,24 +1,11 @@
+import TabHeading from "../components/TabHeading";
+
 export default function Analytics() {
   return (
     <div
       class="px-10 pt-12"
     >
-      <div
-        class="flex w-full justify-between items-center"
-      >
-        <h2
-          class="text-xl font-bold"
-        >
-          Analytics
-        </h2>
-        <div
-          class="space-x-6"
-        >
-          <button type="button" class="material-symbols-outlined select-none">
-            settings
-          </button>
-        </div>
-      </div>
+      <TabHeading heading="Analytics" icons={["settings"]} />
     </div>
   );
 }
