@@ -17,6 +17,9 @@
     'GRAD' 0,
     'opsz' 24
   }
+  svg rect:nth-child(3) {
+   fill: url(#mask);
+}
 }
 
 ::-webkit-scrollbar {
@@ -35,3 +38,4 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #515151;
 }
+

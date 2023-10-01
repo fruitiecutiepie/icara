@@ -2,7 +2,7 @@ import { addDoc, collection } from "firebase/firestore";
 import { createResource, createSignal } from "solid-js";
 import db from "../../db";
 
-export default function AddItem() {
+export default function Routine() {
   const [name, setName] = createSignal("");
   const [description, setDescription] = createSignal("");
   const [quantity, setQuantity] = createSignal(0);
