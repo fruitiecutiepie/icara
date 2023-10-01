@@ -20,24 +20,12 @@
             }
           },
           {
-            "id": "5a594a28388866ca",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Icara.md",
-                "mode": "source",
-                "source": true
-              }
-            }
-          },
-          {
             "id": "91b81ab342a89d93",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lookup Feature.md",
+                "file": "Database Design.md",
                 "mode": "preview",
                 "source": true
               }
@@ -73,7 +61,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "texture",
+                "query": "analyti",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -111,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Icara.md",
+                "file": "Database Design.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -128,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Icara.md",
+                "file": "Database Design.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -151,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Icara.md"
+                "file": "Database Design.md"
               }
             }
           },
@@ -195,11 +183,14 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "5a594a28388866ca",
+  "active": "91b81ab342a89d93",
   "lastOpenFiles": [
+    "Icara.md",
     "System Requirements.md",
-    "References.md",
+    "Database Design.md",
     "Lookup Feature.md",
+    "References.md",
+    "Glossary of Terms.md",
     "Barcodes.md",
     "Competitor.md",
     "diagrams/ERD.drawio",
@@ -209,13 +200,10 @@
     "Pasted image 20230927204150.png",
     "attachments",
     "Pasted image 20230927204320.png",
-    "Icara.md",
     "newfile",
     "Tips of the Day.md",
     "Brand Philosophy.md",
     "Brand Values.md",
-    "Glossary of Terms.md",
-    "Database Design.md",
     "Design System.md",
     "Design System",
     "Business Plan.md",
