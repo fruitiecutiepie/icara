@@ -2,6 +2,7 @@ import type { Component } from 'solid-js';
 import { Routes, Route, A, useLocation } from '@solidjs/router';
 
 import logo from '../../../1_problem/assets/icon.svg'
+import profile_picture from '../../../1_problem/assets/profile_picture.png'
 import TabButton from './components/TabButton';
 
 import Home from './pages/Home';
@@ -23,7 +24,7 @@ const App: Component = () => {
             md:border-t-0 md:justify-end md:border-r md:top-0 md:bottom-auto md:overflow-y-auto md:h-full md:w-auto lg:w-1/4"
         >
           <div
-            class="flex md:flex-col md:justify-between md:pb-12"
+            class="flex space-x-14 md:flex-col md:justify-between md:pb-12 md:space-x-0"
           >
             <div
               class="flex justify-end select-none md:flex-col md:space-y-10 md:justify-start md:items-center md:w-16 lg:w-52"
@@ -41,9 +42,19 @@ const App: Component = () => {
               >
                 <TabButton path="/home" icon="home" label="Home" noScroll />
                 <TabButton path="/routine" icon="routine" label="Routine" noScroll />
-                <TabButton path="/items/collection" icon="shelves" label="Items" />
-                <TabButton path="/analytics" icon="analytics" label="Analytics" noScroll />
-                <TabButton path="/profile" icon="person" label="Profile" />
+                <div
+                  class="flex-col hidden md:flex md:space-y-10 md:space-x-0 md:justify-start lg:items-start lg:self-start"
+                >
+                  <TabButton path="/items/storage" icon="home_storage" label="Storage" />
+                  <TabButton path="/items/collection" icon="shelves" label="Collection" />
+                  <TabButton path="/items/archive" icon="archive" label="Archive" />
+                </div>
+                <div
+                  class="md:hidden"
+                >
+                  <TabButton path="/items/collection" icon="shelves" label="Items" />
+                </div>
+                <TabButton path="/analytics" icon="notifications" label="Notifications" noScroll />
                 <A
                   href="/scan"
                   class="
@@ -66,6 +77,23 @@ const App: Component = () => {
                 </A>
               </nav>
             </div>
+            <A
+              href="/profile"
+              class="flex items-center justify-center lg:space-x-4 lg:justify-start w-full"
+            >
+              <span
+                class="material-symbols-outlined self-center"
+              >
+                face
+              </span>
+              {/* TODO */}
+              {/* <img src={profile_picture} class="w-6 h-6 rounded-full" alt="profile_picture" /> */}
+              <span
+                class="text-xl font-display hidden lg:flex"
+              >
+                Profile
+              </span>
+            </A>
           </div>
         </div>
       )}

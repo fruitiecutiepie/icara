@@ -34,12 +34,22 @@ export default function Routine() {
   // if (loading) return <p>Loading...</p>;
   // if (error) return <p>Error :(</p>;
 
+
   return (
     <div>
       <div
-        class="flex flex-col justify-center h-14 p-5 md:h-auto md:pt-12 md:px-10"
+        class="flex flex-col justify-center h-14 p-5 md md:h-auto md:pt-12 md:px-10"
       >
-        <TabHeading heading="Routine" icons={["settings"]} />
+        <div
+          class="flex-col hidden md:flex"
+        >
+          <TabHeading heading="Routine" icons={["settings", "shadow_add"]} />
+        </div>
+        <div
+          class="flex flex-col md:hidden"
+        >
+          <TabHeading heading="Routine" icons={["settings"]} />
+        </div>
         <FloatingActionButton path="/routine/new" icon="add" />
       </div>
       <div

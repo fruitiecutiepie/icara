@@ -55,7 +55,7 @@ export default function Scan() {
       <div class="relative flex flex-col h-full justify-center items-center md:mt-32">
         <video ref={setVideoElement} class="w-screen h-screen md:h-fit object-cover -scale-x-100 md:rounded-xl"></video>
         <div
-          class="absolute flex w-full justify-between items-center top-0 px-10 pt-12"
+          class="absolute flex w-full justify-between items-center top-0 h-14 p-5 md:h-auto md:pt-12 md:px-10"
         >
           <button type="button" class="material-symbols-outlined text-white select-none" onClick={handleCloseClick}>
             close

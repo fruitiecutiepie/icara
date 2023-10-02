@@ -22,7 +22,7 @@ export default function TabHeading(props: Props) {
         >
           <For each={merged.icons}>
             {(icon) => (
-              <button type="button" class="material-symbols-outlined text-2xl select-none">
+              <button type="button" class="material-symbols-outlined select-none">
                 {icon}
               </button>
             )}
