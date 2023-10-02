@@ -9,8 +9,11 @@ import Home from './pages/Home';
 import Routine from './pages/Routine';
 import Collection from './pages/Collection';
 import Scan from './pages/Scan'
-import Analytics from './pages/Analytics';
+import Notifications from './pages/Notifications';
 import Profile from './pages/Profile';
+import Storage from './pages/Storage';
+import Archive from './pages/Archive';
+import Settings from './pages/Settings';
 
 const App: Component = () => {
   const location = useLocation();
@@ -50,16 +53,33 @@ const App: Component = () => {
                   <TabButton path="/items/archive" icon="archive" label="Archive" />
                 </div>
                 <div
-                  class="md:hidden"
+                  class="flex md:hidden"
                 >
                   <TabButton path="/items/collection" icon="shelves" label="Items" />
                 </div>
-                <TabButton path="/analytics" icon="notifications" label="Notifications" noScroll />
+                <TabButton path="/notifications" icon="notifications" label="Notifications" noScroll />
+                <A
+                  href="/profile"
+                  class="flex items-center justify-center lg:space-x-4 lg:justify-start w-full"
+                >
+                  <span
+                    class="material-symbols-outlined self-center"
+                  >
+                    person
+                  </span>
+                  {/* TODO */}
+                  {/* <img src={profile_picture} class="w-6 h-6 rounded-full" alt="profile_picture" /> */}
+                  <span
+                    class="text-xl font-display hidden lg:flex"
+                  >
+                    Profile
+                  </span>
+                </A>
                 <A
                   href="/scan"
                   class="
-                    hidden items-center justify-center rounded-full text-white bg-red-500 shadow-[0_8px_28px_rgba(0,0,0,0.08)]
-                    md:flex md:w-12 md:h-12 lg:w-auto md:p-1 lg:py-3 lg:px-16 hover:bg-neutral-600 transition duration-300
+                    hidden items-center justify-center rounded-full text-white bg-teal-400 shadow-[0_8px_28px_rgba(0,0,0,0.08)]
+                    md:flex md:w-12 md:h-12 lg:w-auto md:p-1 lg:py-3 lg:px-16 hover:bg-teal-500 transition duration-300
                   "
                   activeClass="material-symbols-filled"
                 >
@@ -77,37 +97,23 @@ const App: Component = () => {
                 </A>
               </nav>
             </div>
-            <A
-              href="/profile"
-              class="flex items-center justify-center lg:space-x-4 lg:justify-start w-full"
-            >
-              <span
-                class="material-symbols-outlined self-center"
-              >
-                face
-              </span>
-              {/* TODO */}
-              {/* <img src={profile_picture} class="w-6 h-6 rounded-full" alt="profile_picture" /> */}
-              <span
-                class="text-xl font-display hidden lg:flex"
-              >
-                Profile
-              </span>
-            </A>
           </div>
         </div>
       )}
       <div
-      class="self-center h-screen w-screen md:w-3/5 lg:w-1/2 lg:border-r"
+      class="self-center h-screen w-screen md:w-3/5 lg:w-1/2"
       >
         <div>
           <Routes>
             <Route path={["/", "/home"]} component={Home} />
             <Route path="/routine" component={Routine} />
+            <Route path="/items/storage" component={Storage} />
             <Route path="/items/collection" component={Collection} />
+            <Route path="/items/archive" component={Archive} />
             <Route path="/scan" component={Scan} />
-            <Route path="/analytics" component={Analytics} />
+            <Route path="/notifications" component={Notifications} />
             <Route path="/profile" component={Profile} />
+            <Route path="/settings" component={Settings} />
           </Routes>
         </div>
       </div>
