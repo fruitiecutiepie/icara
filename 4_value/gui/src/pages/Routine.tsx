@@ -2,6 +2,7 @@ import { addDoc, collection } from "firebase/firestore";
 import { createResource, createSignal } from "solid-js";
 import db from "../../db";
 import TabHeading from "../components/TabHeading";
+import FloatingActionButton from "../components/FloatingActionButton";
 
 export default function Routine() {
   const [name, setName] = createSignal("");
@@ -34,10 +35,13 @@ export default function Routine() {
   // if (error) return <p>Error :(</p>;
 
   return (
-    <div
-      class="px-10 pt-12"
-    >
-      <TabHeading heading="Routine" icons={["settings"]} />
+    <div>
+      <div
+        class="flex flex-col justify-center h-14 p-5 md:h-auto md:pt-12 md:px-10"
+      >
+        <TabHeading heading="Routine" icons={["settings"]} />
+        <FloatingActionButton path="/routine/new" icon="add" />
+      </div>
       <div
         class="flex flex-col w-full pt-9 pb-10 md:px-10 items-center"
       >

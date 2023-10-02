@@ -26,7 +26,7 @@ const App: Component = () => {
             class="flex md:flex-col md:justify-between md:pb-12"
           >
             <div
-              class="flex justify-end select-none md:flex-col md:space-y-12 md:justify-start md:items-center md:w-16 lg:w-52"
+              class="flex justify-end select-none md:flex-col md:space-y-10 md:justify-start md:items-center md:w-16 lg:w-52"
             >
               <div class="pt-12 hidden w-full justify-center md:flex lg:justify-start">
                 <A
@@ -36,8 +36,8 @@ const App: Component = () => {
                 </A>
               </div>
               <nav
-                class="flex space-x-12 items-center w-full
-                md:flex-col md:space-y-12 md:space-x-0 md:justify-start lg:items-start lg:self-start"
+                class="flex space-x-14 items-center w-full
+                md:flex-col md:space-y-10 md:space-x-0 md:justify-start lg:items-start lg:self-start"
               >
                 <TabButton path="/home" icon="home" label="Home" noScroll />
                 <TabButton path="/routine" icon="routine" label="Routine" noScroll />
@@ -48,7 +48,7 @@ const App: Component = () => {
                   href="/scan"
                   class="
                     hidden items-center justify-center rounded-full text-white bg-red-500 shadow-[0_8px_28px_rgba(0,0,0,0.08)]
-                    md:flex md:w-1/2 lg:w-auto md:p-1 lg:py-3 lg:px-16 hover:bg-neutral-600 transition duration-300
+                    md:flex md:w-12 md:h-12 lg:w-auto md:p-1 lg:py-3 lg:px-16 hover:bg-neutral-600 transition duration-300
                   "
                   activeClass="material-symbols-filled"
                 >
@@ -56,12 +56,12 @@ const App: Component = () => {
                     class="material-symbols-outlined self-center lg:hidden
                     "
                   >
-                    add
+                    barcode_scanner
                   </span>
                   <span
                     class="text-xl font-display hidden lg:flex"
                   >
-                    Add
+                    Scan
                   </span>
                 </A>
               </nav>

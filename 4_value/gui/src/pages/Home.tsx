@@ -1,11 +1,15 @@
 import TabHeading from "../components/TabHeading";
+import FloatingActionButton from "../components/FloatingActionButton";
 
 export default function Home() {
   return (
-    <div
-      class="px-10 pt-12"
-    >
-      <TabHeading heading="Home" icons={["notifications"]} />
+    <div>
+      <div
+        class="flex flex-col justify-center h-14 p-5 md:h-auto md:pt-12 md:px-10"
+      >
+        <TabHeading heading="Home" icons={["notifications"]} />
+        <FloatingActionButton path="/scan" icon="barcode_scanner" />
+      </div>
     </div>
   );
 }
