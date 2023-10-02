@@ -16,8 +16,8 @@ export default function TabButton(props: Props) {
       <A
         href={merged.path}
         class="
-          flex justify-center rounded-full text-white bg-red-500 shadow-[0_8px_28px_rgba(0,0,0,0.08)]
-          w-14 h-14 p-1 hover:bg-neutral-600 transition duration-300 md:hidden
+          flex justify-center rounded-full text-white bg-teal-400 shadow-[0_8px_28px_rgba(0,0,0,0.08)]
+          w-14 h-14 p-1 hover:bg-teal-500 transition duration-300 md:hidden
         "
         activeClass="material-symbols-filled"
       >
