@@ -41,7 +41,7 @@ const App: Component = () => {
                 </A>
               </div>
               <nav
-                class="flex space-x-14 items-center w-full
+                class="flex space-x-12 items-center w-full
                 md:flex-col md:space-y-10 md:space-x-0 md:justify-start lg:items-start lg:self-start"
               >
                 <TabButton path="/home" icon="home" label="Home" noScroll />
