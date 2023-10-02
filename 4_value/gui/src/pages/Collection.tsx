@@ -10,12 +10,20 @@ export default function Collection() {
         <div
           class="flex-col hidden md:flex"
         >
-          <TabHeading heading="Collection" icons={["shadow_add"]} />
+          <TabHeading
+            heading="Collection"
+            icon_path={[{ icon: "shadow_add", path: "/items/add" }]}
+          />
         </div>
         <div
           class="flex flex-col md:hidden"
         >
-          <TabHeading heading="Collection" icons={["archive", "home_storage"]} />
+          <TabHeading
+            heading="Collection"
+            icon_path={[
+              { icon: "archive", path: "/items/archive" },
+              { icon: "home_storage", path: "/items/storage" },]}
+          />
         </div>
         <FloatingActionButton path="/scan" icon="barcode_scanner" />
       </div>

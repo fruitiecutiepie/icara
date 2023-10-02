@@ -7,7 +7,9 @@ export default function Home() {
       <div
         class="flex flex-col justify-center h-14 p-5 md:h-auto md:pt-12 md:px-10"
       >
-        <TabHeading heading="Home" icons={["notifications"]} />
+        <TabHeading
+          heading="Home"
+        />
         <FloatingActionButton path="/scan" icon="barcode_scanner" />
       </div>
     </div>

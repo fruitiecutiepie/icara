@@ -6,7 +6,10 @@ export default function Profile() {
       <div
         class="flex flex-col justify-center h-14 p-5 md:h-auto md:pt-12 md:px-10"
       >
-        <TabHeading heading="Profile" icons={["settings"]} />
+        <TabHeading
+          heading="Profile"
+          icon_path={[{ icon: "settings", path: "/settings" }]}
+        />
       </div>
     </div>
   );

@@ -43,14 +43,23 @@ export default function Routine() {
         <div
           class="flex-col hidden md:flex"
         >
-          <TabHeading heading="Routine" icons={["settings", "shadow_add"]} />
+          <TabHeading
+            heading="Routine"
+              icon_path={[
+                { icon: "settings", path: "/settings/routine" },
+                { icon: "shadow_add", path: "/routine/add" }
+              ]}
+          />
         </div>
         <div
           class="flex flex-col md:hidden"
         >
-          <TabHeading heading="Routine" icons={["settings"]} />
+          <TabHeading
+            heading="Routine"
+            icon_path={[{ icon: "settings", path: "/settings/routine" }]}
+          />
         </div>
-        <FloatingActionButton path="/routine/new" icon="add" />
+        <FloatingActionButton path="/routine/add" icon="add" />
       </div>
       <div
         class="flex flex-col w-full pt-9 pb-10 md:px-10 items-center"
