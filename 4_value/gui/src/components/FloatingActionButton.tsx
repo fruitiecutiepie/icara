@@ -11,7 +11,8 @@ export default function TabButton(props: Props) {
   
   return (
     <div
-      class="flex justify-end right-5 bottom-[4.5rem] fixed"
+      // Change bottom-24 to bottom-[4.5rem] for native web experience
+      class="flex justify-end right-5 bottom-24 fixed"
     >
       <A
         href={merged.path}
@@ -22,7 +23,7 @@ export default function TabButton(props: Props) {
         activeClass="material-symbols-filled"
       >
         <span
-          class="material-symbols-outlined self-center lg:hidden
+          class="material-symbols-outlined self-center select-none lg:hidden
           "
         >
           {merged.icon}

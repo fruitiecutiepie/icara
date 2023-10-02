@@ -23,7 +23,8 @@ const App: Component = () => {
     >
       {location.pathname !== '/scan' && (
         <div
-          class="flex w-full h-14 fixed bottom-0 justify-center z-20 border-t
+          // Change h-20 to h-14 and remove pb-safe for native web experience
+          class="flex w-full fixed h-20 pb-safe bottom-0 justify-center z-20 border-t
             md:border-t-0 md:justify-end md:border-r md:top-0 md:bottom-auto md:overflow-y-auto md:h-full md:w-auto lg:w-1/4"
         >
           <div

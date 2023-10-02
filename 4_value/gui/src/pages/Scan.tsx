@@ -52,7 +52,7 @@ export default function Scan() {
   
   return (
     <Show when={!result()} fallback={<Navigate href={`/items/add/${result()}`} />}>
-      <div class="relative flex flex-col h-full justify-center items-center lg:mt-12">
+      <div class="relative select-none flex flex-col h-full justify-center items-center lg:mt-12">
         <video
           ref={setVideoElement}
           class="w-screen h-screen object-cover -scale-x-100 lg:h-fit lg:rounded-xl"
@@ -73,7 +73,7 @@ export default function Scan() {
               class="flex w-1/3 items-center justify-start"
             >
               <button
-                class="material-symbols-outlined text-white select-none"
+                class="material-symbols-outlined text-white"
                 onClick={goBack}
               >
                   arrow_back
@@ -83,7 +83,7 @@ export default function Scan() {
               class="w-1/3 flex items-center justify-center"
             >
               <h2
-                class="flex items-center text-lg text-white font-display font-bold"
+                class="flex items-center text-xl text-white font-display font-bold"
               >
                 Scan
               </h2>
@@ -94,7 +94,8 @@ export default function Scan() {
             </div>
           </div>
           <A
-            class="flex w-full h-14 md:pb-12 fixed bottom-0 font-display justify-center items-center text-white lg:text-black"
+            // Change h-20 to h-14 and remove pb-safe for native web experience
+            class="flex w-full h-20 pb-safe md:pb-12 fixed bottom-0 font-display justify-center items-center text-white lg:text-black"
             href="/items/add"
           >
             Skip
