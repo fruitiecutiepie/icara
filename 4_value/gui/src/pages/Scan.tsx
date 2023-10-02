@@ -1,6 +1,6 @@
 import { Show, createSignal, onCleanup, onMount } from 'solid-js';
 import { BarcodeFormat, BrowserMultiFormatReader, DecodeHintType, NotFoundException } from '@zxing/library';
-import { Navigate } from '@solidjs/router';
+import { A, Navigate } from '@solidjs/router';
 
 export default function Scan() {
   const [result, setResult] = createSignal("");
@@ -46,30 +46,60 @@ export default function Scan() {
     codeReader.reset();
   });
 
-  const handleCloseClick = () => {
+  const goBack = () => {
     window.history.back();
   }
   
   return (
-    <Show when={!result()} fallback={<Navigate href={`/new/${result()}`} />}>
-      <div class="relative flex flex-col h-full justify-center items-center md:mt-32">
-        <video ref={setVideoElement} class="w-screen h-screen md:h-fit object-cover -scale-x-100 md:rounded-xl"></video>
-        <div
-          class="absolute flex w-full justify-between items-center top-0 h-14 p-5 md:h-auto md:pt-12 md:px-10"
+    <Show when={!result()} fallback={<Navigate href={`/items/add/${result()}`} />}>
+      <div class="relative flex flex-col h-full justify-center items-center lg:mt-12">
+        <video
+          ref={setVideoElement}
+          class="w-screen h-screen object-cover -scale-x-100 lg:h-fit lg:rounded-xl"
         >
-          <button type="button" class="material-symbols-outlined text-white select-none" onClick={handleCloseClick}>
-            close
-          </button>
-          <h2
-            class="text-xl font-bold text-white select-none"
-          >
-            Scan
-          </h2>
-          <span class="material-symbols-outlined text-white invisible select-none">
-            close
-          </span>
+        </video>
+        <div
+          class="flex flex-col h-screen w-screen items-center justify-center absolute"
+        >
+          <div class="h-1/4 w-5/6 lg:w-1/3 lg:h-1/3 md:max-w-xs lg:max-h-48 border-2 border-white rounded-xl fixed"></div>
         </div>
-        <div class="w-3/4 h-1/4 md:w-1/2 md:h-1/3 border-2 rounded-xl absolute"></div>
+        <div
+          class="absolute flex flex-col w-full justify-between items-center top-0 h-14 p-5 lg:h-auto md:pt-12 md:px-10"
+        >
+          <div
+            class="flex w-full"
+          >
+            <div
+              class="flex w-1/3 items-center justify-start"
+            >
+              <button
+                class="material-symbols-outlined text-white select-none"
+                onClick={goBack}
+              >
+                  arrow_back
+                </button>
+            </div>
+            <div
+              class="w-1/3 flex items-center justify-center"
+            >
+              <h2
+                class="flex items-center text-lg text-white font-display font-bold"
+              >
+                Scan
+              </h2>
+            </div>
+            <div
+              class="w-1/3 flex items-center justify-end"
+            >
+            </div>
+          </div>
+          <A
+            class="flex w-full h-14 md:pb-12 fixed bottom-0 font-display justify-center items-center text-white lg:text-black"
+            href="/items/add"
+          >
+            Skip
+          </A>
+        </div>
       </div>
     </Show>
   );
