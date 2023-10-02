@@ -62,6 +62,7 @@ const App: Component = () => {
                 <A
                   href="/profile"
                   class="flex items-center justify-center lg:space-x-4 lg:justify-start w-full"
+                  activeClass="material-symbols-filled"
                 >
                   <span
                     class="material-symbols-outlined self-center"
