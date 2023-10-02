@@ -55,7 +55,7 @@ export default function Scan() {
       <div class="relative select-none flex flex-col h-full justify-center items-center lg:mt-12">
         <video
           ref={setVideoElement}
-          class="w-screen h-screen object-cover -scale-x-100 lg:h-fit lg:rounded-xl"
+          class="w-screen h-screen object-cover lg:h-fit lg:rounded-xl"
         >
         </video>
         <div

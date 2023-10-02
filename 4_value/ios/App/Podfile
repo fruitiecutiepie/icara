@@ -9,7 +9,7 @@ install! 'cocoapods', :disable_input_output_paths => true
 def capacitor_pods
   pod 'Capacitor', :path => '../../gui/node_modules/.pnpm/@capacitor+ios@5.4.1_@capacitor+core@5.4.1/node_modules/@capacitor/ios'
   pod 'CapacitorCordova', :path => '../../gui/node_modules/.pnpm/@capacitor+ios@5.4.1_@capacitor+core@5.4.1/node_modules/@capacitor/ios'
-
+  pod 'CapacitorCamera', :path => '../../gui/node_modules/.pnpm/@capacitor+camera@5.0.7_@capacitor+core@5.4.1/node_modules/@capacitor/camera'
 end
 
 target 'Icara' do

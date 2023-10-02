@@ -61,7 +61,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "analyti",
+                "query": "collection",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -185,12 +185,15 @@
   },
   "active": "91b81ab342a89d93",
   "lastOpenFiles": [
-    "Icara.md",
+    "assets/profile_picture.png",
+    "assets/profile_pic.png",
+    "assets/IMG_9541_1x1.png",
     "System Requirements.md",
-    "Database Design.md",
-    "Lookup Feature.md",
-    "References.md",
     "Glossary of Terms.md",
+    "Database Design.md",
+    "References.md",
+    "Icara.md",
+    "Lookup Feature.md",
     "Barcodes.md",
     "Competitor.md",
     "diagrams/ERD.drawio",
