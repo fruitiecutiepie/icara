@@ -38,6 +38,7 @@ export default function TabHeading(props: Props) {
   return (
     <div
       // You need to specify/copy each page style config from the parent divs here because of position: fixed
+      // TODO: Find a better way to do this, you can't use fixed because of mobile safe area, otherwise figure out how to get around this
       class={`flex fixed top-0 left-0 backdrop-blur-md bg-zinc-50 bg-opacity-70 transform transition-transform duration-300
       w-screen md:w-3/5 lg:w-1/2 md:left-[20%] lg:left-1/4 h-14 p-5 md:h-auto md:pt-12 md:px-10
       ${isVisible() ? 'translate-y-0' : '-translate-y-full'}

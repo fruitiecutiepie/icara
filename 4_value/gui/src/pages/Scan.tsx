@@ -4,7 +4,7 @@ import { A, Navigate } from '@solidjs/router';
 
 export default function Scan() {
   const [result, setResult] = createSignal("");
-  const [videoElement, setVideoElement] = createSignal<HTMLVideoElement | undefined>(); // Use createSignal to store the video element
+  const [videoElement, setVideoElement] = createSignal<HTMLVideoElement | undefined>();
   
   const possibleFormats = [
     BarcodeFormat.EAN_8,
@@ -25,7 +25,11 @@ export default function Scan() {
       return;
     }
 
-    const selectedDeviceId = videoInputDevices[0].deviceId;
+    const backCamera = videoInputDevices.find(device =>
+      /back|rear/i.test(device.label)
+    );
+
+    const selectedDeviceId = backCamera ? backCamera.deviceId : videoInputDevices[0].deviceId;
     console.log(`Started continuous decode from camera with id ${selectedDeviceId}`);
 
     // Use the stored video element here
@@ -95,7 +99,7 @@ export default function Scan() {
           </div>
           <A
             // Change h-20 to h-14 and remove pb-safe for native web experience
-            class="flex w-full h-20 pb-safe md:pb-12 fixed bottom-0 font-display justify-center items-center text-white lg:text-black"
+            class="flex w-full h-14 pb-safe md:pb-12 fixed bottom-0 font-display justify-center items-center text-white lg:text-black"
             href="/items/add"
           >
             Skip

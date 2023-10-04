@@ -12,7 +12,7 @@ export default function TabButton(props: Props) {
   return (
     <div
       // Change bottom-24 to bottom-[4.5rem] for native web experience
-      class="flex justify-end right-5 bottom-24 fixed"
+      class="flex justify-end right-5 bottom-[4.5rem] fixed"
     >
       <A
         href={merged.path}
