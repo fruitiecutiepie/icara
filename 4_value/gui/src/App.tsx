@@ -24,7 +24,7 @@ const App: Component = () => {
       {location.pathname !== '/scan' && (
         <div
           // Change h-20 to h-14 and remove pb-safe for native web experience
-          class="flex w-full fixed h-20 pb-safe bottom-0 justify-center z-20 border-t
+          class="flex w-full fixed h-14 pb-safe bg-zinc-50 bottom-0 justify-center z-20 border-t
             md:border-t-0 md:justify-end md:border-r md:top-0 md:bottom-auto md:overflow-y-auto md:h-full md:w-auto lg:w-1/4"
         >
           <div
@@ -103,7 +103,7 @@ const App: Component = () => {
         </div>
       )}
       <div
-      class="self-center h-screen w-screen md:w-3/5 lg:w-1/2"
+        class="self-center h-screen w-screen md:w-3/5 lg:w-1/2"
       >
         <div>
           <Routes>
