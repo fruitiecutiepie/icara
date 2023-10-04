@@ -1,5 +1,5 @@
 import { A } from "@solidjs/router";
-import { For, mergeProps } from "solid-js";
+import { For, mergeProps, createSignal, createEffect, onCleanup } from "solid-js";
 
 type Props = {
   heading: string,
@@ -14,9 +14,34 @@ export default function TabHeading(props: Props) {
     window.history.back();
   }
 
+  const [lastScrollTop, setLastScrollTop] = createSignal(0);
+  const [isVisible, setIsVisible] = createSignal(true);
+
+  const handleScroll = () => {
+    if (window.innerWidth < 768) {
+      const st = window.scrollY || document.documentElement.scrollTop;
+      if (st > lastScrollTop()) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+      setLastScrollTop(st <= 0 ? 0 : st);
+    }
+  }
+
+  window.addEventListener('scroll', handleScroll);
+
+  onCleanup(() => {
+    window.removeEventListener('scroll', handleScroll);
+  })
+
   return (
     <div
-      class="flex w-full"
+      // You need to specify/copy each page style config from the parent divs here because of position: fixed
+      class={`flex fixed top-0 left-0 backdrop-blur-md bg-zinc-50 bg-opacity-70 transform transition-transform duration-300
+      w-screen md:w-3/5 lg:w-1/2 md:left-[20%] lg:left-1/4 h-14 p-5 md:h-auto md:pt-12 md:px-10
+      ${isVisible() ? 'translate-y-0' : '-translate-y-full'}
+      `}
     >
       <div
         class="flex w-1/3 items-center justify-start"
