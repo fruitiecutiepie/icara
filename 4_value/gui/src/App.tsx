@@ -23,31 +23,30 @@ const App: Component = () => {
     >
       {location.pathname !== '/scan' && (
         <div
-          // Change h-20 to h-14 and remove pb-safe for native web experience
-          class="flex w-full fixed h-14 pb-safe bg-zinc-50 bottom-0 justify-center z-20 border-t
-            md:border-t-0 md:justify-end md:border-r md:top-0 md:bottom-auto md:overflow-y-auto md:h-full md:w-auto lg:w-1/4"
+          class="flex w-full fixed min-h-[3.5rem] bg-zinc-50 bottom-0 z-20 border-t
+            md:border-t-0 md:justify-end md:top-0 md:bottom-auto md:overflow-y-auto md:h-full md:w-auto lg:w-1/4"
         >
           <div
-            class="flex space-x-14 md:flex-col md:justify-between md:pb-12 md:space-x-0"
+            class="flex w-full justify-center items-end md:flex-col md:justify-between md:pb-12"
           >
             <div
-              class="flex justify-end select-none md:flex-col md:space-y-10 md:justify-start md:items-center md:w-16 lg:w-52"
+              class="flex justify-end items-center select-none md:flex-col md:justify-start md:items-center md:w-16 lg:w-52"
             >
-              <div class="pt-12 hidden w-full justify-center md:flex lg:justify-start">
+              <div class="pt-3 hidden w-full md:flex lg:justify-start">
                 <A
+                  class="flex items-center justify-center py-3 px-5 md:px-3 my-1 mx-1 md:mx-0 lg:justify-start w-full"
                   href="/home"
                 >
                   <img src={logo} class="w-7 h-7" alt="logo" />
                 </A>
               </div>
               <nav
-                class="flex space-x-12 items-center w-full
-                md:flex-col md:space-y-10 md:space-x-0 md:justify-start lg:items-start lg:self-start"
+                class="flex items-center justify-center w-full md:flex-col lg:items-start"
               >
                 <TabButton path="/home" icon="home" label="Home" noScroll />
                 <TabButton path="/routine" icon="routine" label="Routine" noScroll />
                 <div
-                  class="flex-col hidden md:flex md:space-y-10 md:space-x-0 md:justify-start lg:items-start lg:self-start"
+                  class="flex-col hidden md:flex md:justify-start lg:items-start lg:self-start"
                 >
                   <TabButton path="/items/storage" icon="home_storage" label="Storage" />
                   <TabButton path="/items/collection" icon="shelves" label="Collection" />
@@ -61,7 +60,7 @@ const App: Component = () => {
                 <TabButton path="/notifications" icon="notifications" label="Notifications" noScroll />
                 <A
                   href="/profile"
-                  class="flex items-center justify-center lg:space-x-4 lg:justify-start w-full"
+                  class="flex items-center justify-center py-3 px-5 md:px-3 my-1 mx-1 md:mx-0 lg:space-x-4 lg:justify-start w-full"
                   activeClass="material-symbols-filled"
                 >
                   <span
@@ -81,7 +80,7 @@ const App: Component = () => {
                   href="/scan"
                   class="
                     hidden items-center justify-center rounded-full text-white bg-teal-400 shadow-[0_8px_28px_rgba(0,0,0,0.08)]
-                    md:flex md:w-12 md:h-12 lg:w-auto md:p-1 lg:py-3 lg:px-16 hover:bg-teal-500 transition duration-300
+                    md:flex md:w-12 md:h-12 lg:w-auto md:p-1 md:my-4 lg:py-3 lg:px-16 hover:bg-teal-500 transition duration-300
                   "
                   activeClass="material-symbols-filled"
                 >
@@ -103,7 +102,7 @@ const App: Component = () => {
         </div>
       )}
       <div
-        class="self-center h-screen w-screen md:w-3/5 lg:w-1/2"
+        class="self-center h-screen w-screen md:w-3/5 lg:w-1/2 md:border-l md:border-r"
       >
         <div>
           <Routes>

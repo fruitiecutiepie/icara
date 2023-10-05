@@ -14,7 +14,7 @@ export default function TabButton(props: Props) {
   return (
     <A
       href={merged.path}
-      class="flex items-center justify-center lg:space-x-4 lg:justify-start w-full"
+      class="flex items-center justify-center py-3 px-5 md:px-3 my-1 mx-1 md:mx-0 lg:space-x-4 lg:justify-start w-full"
       activeClass="material-symbols-filled"
       {...(merged.noScroll ? { noScroll: true } : null)}
     >
