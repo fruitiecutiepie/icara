@@ -24,7 +24,7 @@ const App: Component = () => {
       {location.pathname !== '/scan' && (
         <div
           class="flex w-full fixed min-h-[3.5rem] bg-zinc-50 bottom-0 z-20 border-t
-            md:border-t-0 md:justify-end md:top-0 md:bottom-auto md:overflow-y-auto md:h-full md:w-auto lg:w-1/4"
+            md:border-t-0 md:border-r lg:border-r-0 md:justify-end md:top-0 md:bottom-auto md:overflow-y-auto md:h-full md:w-auto lg:w-1/4"
         >
           <div
             class="flex w-full justify-center items-end md:flex-col md:justify-between md:pb-12"
@@ -102,7 +102,7 @@ const App: Component = () => {
         </div>
       )}
       <div
-        class="self-center h-screen w-screen md:w-3/5 lg:w-1/2 md:border-l md:border-r"
+        class="self-center min-h-screen md:w-3/5 lg:w-1/2 lg:border-l lg:border-r"
       >
         <div>
           <Routes>

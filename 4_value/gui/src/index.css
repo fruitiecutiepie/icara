@@ -31,12 +31,6 @@
     'GRAD' 0,
     'opsz' 24
   }
-  .pb-safe {
-    padding-bottom: env(safe-area-inset-bottom);
-  }
-  .tabs-safe {
-    padding-bottom: calc(env(safe-area-inset-bottom) + 3.5rem);
-  }
 }
 
 ::-webkit-scrollbar {
