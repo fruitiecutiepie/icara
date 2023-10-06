@@ -42,7 +42,7 @@
   }
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 0.67em;
   height: 0.1em;
 }
@@ -57,5 +57,5 @@
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #515151;
-}
+} */
 
