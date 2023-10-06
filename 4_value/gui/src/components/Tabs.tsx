@@ -7,7 +7,7 @@ export default function Tabs() {
     <div
       // class="flex w-full min-h-[3.5rem] bg-zinc-50 bottom-0 border-t
       //   md:border-t-0 md:border-r lg:border-r-0 md:justify-end md:top-0 md:bottom-auto md:overflow-y-auto md:h-full md:w-auto lg:w-1/4"
-        class="sticky top-0 bottom-0 bg-zinc-50 border-t md:border-t-0"
+        class="sticky top-0 bottom-0 pb-safe bg-zinc-50 border-t md:border-t-0"
     >
       <div
         class="flex w-full justify-center items-end md:flex-col md:justify-between md:pb-12"
