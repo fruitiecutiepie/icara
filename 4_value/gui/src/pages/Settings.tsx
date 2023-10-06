@@ -1,3 +1,4 @@
+import PageHeading from "../components/PageHeading";
 import TabHeading from "../components/TabHeading";
 
 export default function Settings() {
@@ -6,6 +7,7 @@ export default function Settings() {
       class=""
     >
       <TabHeading heading="Settings" goBack />
+      <PageHeading heading="Settings" />
       <div
         class="pt-5 px-5"
       ></div>

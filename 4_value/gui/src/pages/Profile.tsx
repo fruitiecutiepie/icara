@@ -1,3 +1,4 @@
+import PageHeading from "../components/PageHeading";
 import TabHeading from "../components/TabHeading";
 
 export default function Profile() {
@@ -9,6 +10,7 @@ export default function Profile() {
         heading="Profile"
         icon_path={[{ icon: "settings", path: "/settings" }]}
       />
+      <PageHeading heading="Profile" />
       <div
         class="pt-5 px-5"
       >

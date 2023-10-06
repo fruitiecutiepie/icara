@@ -3,6 +3,7 @@ import { createResource, createSignal } from "solid-js";
 import db from "../../db";
 import TabHeading from "../components/TabHeading";
 import FloatingActionButton from "../components/FloatingActionButton";
+import PageHeading from "../components/PageHeading";
 
 export default function Routine() {
   const [name, setName] = createSignal("");
@@ -58,6 +59,7 @@ export default function Routine() {
           icon_path={[{ icon: "settings", path: "/settings/routine" }]}
         />
       </div>
+      <PageHeading heading="Routine" />
       <FloatingActionButton path="/routine/add" icon="add" />
       <div
         class="pt-5 px-5"

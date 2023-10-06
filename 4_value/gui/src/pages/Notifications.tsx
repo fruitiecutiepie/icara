@@ -1,3 +1,4 @@
+import PageHeading from "../components/PageHeading";
 import TabHeading from "../components/TabHeading";
 
 export default function Notifications() {
@@ -9,6 +10,7 @@ export default function Notifications() {
         heading="Notifications"
         icon_path={[{ icon: "settings", path: "/settings/notifications" }]}
       />
+      <PageHeading heading="Notifications" />
       <div
         class="pt-5 px-5"
       >

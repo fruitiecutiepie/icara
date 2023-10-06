@@ -94,11 +94,6 @@ export default function TabHeading(props: Props) {
           </div>
         </div>
       </div>
-      <h1
-        class={`font-display font-bold text-4xl md:hidden px-5 ${isVisible() ? 'invisible' : 'visible'}`}
-      >
-        {merged.heading}
-      </h1>
     </>
   )
 }

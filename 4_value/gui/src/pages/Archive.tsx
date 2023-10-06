@@ -1,3 +1,4 @@
+import PageHeading from "../components/PageHeading";
 import TabHeading from "../components/TabHeading";
 
 export default function Archive() {
@@ -6,6 +7,7 @@ export default function Archive() {
       class=""
     >
       <TabHeading heading="Archive" goBack />
+      <PageHeading heading="Archive" />
       <div
         class="pt-5 px-5"
       >
