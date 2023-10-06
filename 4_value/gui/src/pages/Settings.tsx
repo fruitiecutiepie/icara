@@ -3,11 +3,11 @@ import TabHeading from "../components/TabHeading";
 export default function Settings() {
   return (
     <div
-      class="px-5"
+      class=""
     >
       <TabHeading heading="Settings" goBack />
       <div
-        class="pt-5 md:pt-16"
+        class="pt-5 px-5"
       ></div>
     </div>
   );

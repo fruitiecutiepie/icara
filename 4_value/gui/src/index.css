@@ -5,10 +5,7 @@
 @layer base {
   html {
     min-height: calc(100vh - env(safe-area-inset-top, 0) - env(safe-area-inset-bottom, 0));
-    padding-top: env(safe-area-inset-top, 0);
-    padding-right: env(safe-area-inset-right, 0);
     padding-bottom: env(safe-area-inset-bottom, 0);
-    padding-left: env(safe-area-inset-left, 0);
     -webkit-tap-highlight-color: transparent;
   }
 }
@@ -30,6 +27,18 @@
     'wght' 400,
     'GRAD' 0,
     'opsz' 24
+  }
+  .pt-safe {
+    padding-top: env(safe-area-inset-top, 0);
+  }
+  .pr-safe {
+    padding-right: env(safe-area-inset-right, 0);
+  }
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom, 0);
+  }
+  .pl-safe {
+    padding-left: env(safe-area-inset-left, 0);
   }
 }
 

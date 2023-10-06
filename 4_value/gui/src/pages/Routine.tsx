@@ -37,10 +37,10 @@ export default function Routine() {
 
   return (
     <div
-      class="px-5"
+      class=""
     >
       <div
-        class="flex-col hidden md:flex"
+        class="flex-col hidden md:flex sticky top-0"
       >
         <TabHeading
           heading="Routine"
@@ -51,7 +51,7 @@ export default function Routine() {
         />
       </div>
       <div
-        class="flex flex-col md:hidden"
+        class="flex flex-col md:hidden sticky top-0"
       >
         <TabHeading
           heading="Routine"
@@ -60,13 +60,13 @@ export default function Routine() {
       </div>
       <FloatingActionButton path="/routine/add" icon="add" />
       <div
-        class="pt-5 md:pt-16"
+        class="pt-5 px-5"
       >
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed augue mauris, semper eu molestie ut, gravida sit amet risus. Vivamus vitae nibh quis turpis dignissim mollis. Donec euismod, ex ultricies tincidunt porttitor, sem sem pellentesque dolor, eu pulvinar elit dui vitae nisl. Vivamus dignissim rutrum sapien, sed sollicitudin turpis imperdiet quis. Donec lobortis cursus ante quis blandit. Sed nec lorem nec est tristique laoreet. Curabitur ac diam maximus, vehicula turpis vel, rutrum arcu. Vivamus fringilla velit ut nulla congue, in dictum dui iaculis. Duis leo lorem, dapibus vel porta eget, bibendum et urna. Praesent lobortis metus eget nibh lacinia faucibus. Nulla ultricies congue tellus. Quisque mi purus, ornare a nisi vitae, vehicula volutpat ligula. Mauris posuere nulla quis lorem tincidunt mattis. In molestie ante non vehicula elementum. Donec urna massa, cursus a accumsan vitae, venenatis quis purus. Ut neque lorem, tristique vel mi mattis, faucibus varius arcu. Sed luctus sollicitudin magna nec porta. Aliquam id lorem vitae justo auctor consequat. Nunc tellus arcu, finibus ac leo quis, dignissim ultrices ante. Phasellus id vestibulum tellus. Nunc rhoncus volutpat leo, nec laoreet ante malesuada sit amet. Nulla sit amet lacinia felis, nec posuere lorem. Morbi consectetur lorem nec interdum efficitur. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Phasellus hendrerit, risus ac ultricies placerat, dui nibh mattis lectus, in convallis diam nulla sed dui. Donec condimentum nunc nec justo feugiat, ut porttitor velit condimentum. Nullam velit ligula, accumsan a lectus vitae, placerat ultricies quam. Duis bibendum sodales nibh. Aenean volutpat mauris nec purus placerat maximus. Fusce et mollis ante, at semper turpis. Ut convallis aliquet mattis. Nunc cursus odio sit amet ipsum venenatis consectetur. Nulla facilisi. Etiam posuere efficitur quam, in consectetur massa vestibulum sit amet. Donec ut nunc nec ante elementum porttitor. Ut malesuada eros ac magna tincidunt efficitur. In hac habitasse platea dictumst. Praesent pellentesque, tellus quis tristique ultricies, magna nisi ullamcorper justo, at dictum ligula neque ut elit. Vivamus ullamcorper purus vel lorem suscipit, vitae feugiat elit euismod. Etiam facilisis ante dui, in ullamcorper massa dapibus et. Morbi porta tellus vel vestibulum sagittis. Cras eu enim eget metus mollis convallis. Morbi egestas tempus urna, pharetra posuere ex lacinia ac. Sed ut elit ligula. Proin hendrerit blandit mi vulputate ultricies. Sed id maximus neque. Aliquam elementum iaculis euismod. Suspendisse eget erat quis ipsum tempor malesuada quis sed lacus. Sed lacinia aliquam risus, quis mollis enim placerat quis. Donec pellentesque varius mi, sit amet blandit lectus aliquet nec. Etiam vulputate ipsum at felis finibus, id tempus sem aliquam. Nam imperdiet id tortor in finibus. Praesent vehicula magna ut nibh tristique ornare. Quisque metus purus, maximus feugiat ante congue, rutrum condimentum tellus. Maecenas lobortis mi eget nunc hendrerit semper. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer nibh nunc, condimentum vel tortor in, ornare tincidunt odio. Nam elementum at augue vel rutrum.</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed augue mauris, semper eu molestie ut, gravida sit amet risus. Vivamus vitae nibh quis turpis dignissim mollis. Donec euismod, ex ultricies tincidunt porttitor, sem sem pellentesque dolor, eu pulvinar elit dui vitae nisl. Vivamus dignissim rutrum sapien, sed sollicitudin turpis imperdiet quis. Donec lobortis cursus ante quis blandit. Sed nec lorem nec est tristique laoreet. Curabitur ac diam maximus, vehicula turpis vel, rutrum arcu. Vivamus fringilla velit ut nulla congue, in dictum dui iaculis. Duis leo lorem, dapibus vel porta eget, bibendum et urna. Praesent lobortis metus eget nibh lacinia faucibus. Nulla ultricies congue tellus. Quisque mi purus, ornare a nisi vitae, vehicula volutpat ligula. Mauris posuere nulla quis lorem tincidunt mattis. In molestie ante non vehicula elementum. Donec urna massa, cursus a accumsan vitae, venenatis quis purus. Ut neque lorem, tristique vel mi mattis, faucibus varius arcu. Sed luctus sollicitudin magna nec porta. Aliquam id lorem vitae justo auctor consequat. Nunc tellus arcu, finibus ac leo quis, dignissim ultrices ante. Phasellus id vestibulum tellus. Nunc rhoncus volutpat leo, nec laoreet ante malesuada sit amet. Nulla sit amet lacinia felis, nec posuere lorem. Morbi consectetur lorem nec interdum efficitur. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Phasellus hendrerit, risus ac ultricies placerat, dui nibh mattis lectus, in convallis diam nulla sed dui. Donec condimentum nunc nec justo feugiat, ut porttitor velit condimentum. Nullam velit ligula, accumsan a lectus vitae, placerat ultricies quam. Duis bibendum sodales nibh. Aenean volutpat mauris nec purus placerat maximus. Fusce et mollis ante, at semper turpis. Ut convallis aliquet mattis. Nunc cursus odio sit amet ipsum venenatis consectetur. Nulla facilisi. Etiam posuere efficitur quam, in consectetur massa vestibulum sit amet. Donec ut nunc nec ante elementum porttitor. Ut malesuada eros ac magna tincidunt efficitur. In hac habitasse platea dictumst. Praesent pellentesque, tellus quis tristique ultricies, magna nisi ullamcorper justo, at dictum ligula neque ut elit. Vivamus ullamcorper purus vel lorem suscipit, vitae feugiat elit euismod. Etiam facilisis ante dui, in ullamcorper massa dapibus et. Morbi porta tellus vel vestibulum sagittis. Cras eu enim eget metus mollis convallis. Morbi egestas tempus urna, pharetra posuere ex lacinia ac. Sed ut elit ligula. Proin hendrerit blandit mi vulputate ultricies. Sed id maximus neque. Aliquam elementum iaculis euismod. Suspendisse eget erat quis ipsum tempor malesuada quis sed lacus. Sed lacinia aliquam risus, quis mollis enim placerat quis. Donec pellentesque varius mi, sit amet blandit lectus aliquet nec. Etiam vulputate ipsum at felis finibus, id tempus sem aliquam. Nam imperdiet id tortor in finibus. Praesent vehicula magna ut nibh tristique ornare. Quisque metus purus, maximus feugiat ante congue, rutrum condimentum tellus. Maecenas lobortis mi eget nunc hendrerit semper. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer nibh nunc, condimentum vel tortor in, ornare tincidunt odio. Nam elementum at augue vel rutrum.</p>
       </div>
 
-      <div
+      {/* <div
         class="flex flex-col w-full pt-9 pb-10 md:px-10 items-center"
       >
         <form
@@ -129,7 +129,7 @@ export default function Routine() {
               </div>
             </div>
 
-            {/* <div
+            <div
               class="
               rounded-md border-transparent relative h-1"
             >
@@ -142,7 +142,7 @@ export default function Routine() {
               >
                 Email or Phone Number
               </span>
-            </div> */}
+            </div>
 
           </div>
           <div
@@ -156,7 +156,7 @@ export default function Routine() {
             </button>
           </div>
         </form>
-      </div>
+      </div> */}
     </div>
   );
 }

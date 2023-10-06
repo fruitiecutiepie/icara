@@ -98,7 +98,6 @@ export default function Scan() {
             </div>
           </div>
           <A
-            // Change h-20 to h-14 and remove pb-safe for native web experience
             class="flex w-full h-14 pb-safe md:pb-12 fixed bottom-0 font-display justify-center items-center text-white lg:text-black"
             href="/items/add"
           >
