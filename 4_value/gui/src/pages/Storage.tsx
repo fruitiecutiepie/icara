@@ -7,11 +7,10 @@ export default function Storage() {
     <div
       class=""
     >
-      <TabHeading heading="Storage" goBack />
       <PageHeading heading="Storage" />
       <FloatingActionButton path="/scan" icon="barcode_scanner" />
       <div
-        class="pt-5 px-5"
+        class="pt-5 px-5 h-screen"
       ></div>
     </div>
   );

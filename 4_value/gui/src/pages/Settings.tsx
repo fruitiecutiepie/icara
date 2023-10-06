@@ -6,10 +6,9 @@ export default function Settings() {
     <div
       class=""
     >
-      <TabHeading heading="Settings" goBack />
       <PageHeading heading="Settings" />
       <div
-        class="pt-5 px-5"
+        class="pt-5 px-5 h-screen"
       ></div>
     </div>
   );
