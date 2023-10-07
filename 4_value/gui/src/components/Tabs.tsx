@@ -1,5 +1,6 @@
 import { A } from '@solidjs/router';
 import logo from '../../../../1_problem/assets/icon.svg';
+import profile_picture from '../../../../1_problem/assets/profile_picture.png';
 import TabButton from './TabButton';
 
 export default function Tabs() {
@@ -17,7 +18,10 @@ export default function Tabs() {
         >
           <div class="pt-3 hidden w-full md:flex lg:justify-start">
             <A
-              class="flex items-center justify-center py-3 px-5 md:px-3 my-1 mx-1 md:mx-0 lg:justify-start w-full"
+              class="
+              flex items-center justify-center w-full py-3 px-5 my-1 mx-1 
+              md:mx-0 md:px-3 lg:px-5 lg:space-x-4 lg:justify-start
+              "
               href="/home"
             >
               <img src={logo} class="w-7 h-7" alt="logo" />
@@ -29,7 +33,7 @@ export default function Tabs() {
             <TabButton path="/home" icon="home" label="Home" noScroll />
             <TabButton path="/routine" icon="routine" label="Routine" noScroll />
             <div
-              class="flex-col hidden md:flex md:justify-start lg:items-start lg:self-start"
+              class="flex-col hidden w-full md:flex md:justify-start lg:items-start lg:self-start"
             >
               <TabButton path="/items/storage" icon="home_storage" label="Storage" />
               <TabButton path="/items/collection" icon="shelves" label="Collection" />
@@ -43,7 +47,11 @@ export default function Tabs() {
             <TabButton path="/notifications" icon="notifications" label="Notifications" noScroll />
             <A
               href="/profile"
-              class="flex items-center justify-center py-3 px-5 md:px-3 my-1 mx-1 md:mx-0 lg:space-x-4 lg:justify-start w-full"
+              class="
+              flex items-center justify-center w-full py-3 px-5 my-1 mx-1 
+              md:mx-0 md:px-3 lg:px-5 lg:space-x-4 lg:justify-start 
+              hover:scale-105 active:scale-95 lg:hover:scale-100 md:hover:bg-indigo-600 md:hover:bg-opacity-5 rounded-xl
+              "
               activeClass="material-symbols-filled"
             >
               <span
@@ -62,8 +70,8 @@ export default function Tabs() {
             <A
               href="/scan"
               class="
-                hidden items-center justify-center rounded-full text-white bg-teal-400 shadow-[0_8px_28px_rgba(0,0,0,0.08)]
-                md:flex md:w-12 md:h-12 lg:w-auto md:p-1 md:my-4 lg:py-3 lg:px-16 hover:bg-teal-500 transition duration-300
+                hidden items-center justify-center self-center rounded-full text-white bg-indigo-500 shadow-[0_8px_28px_rgba(0,0,0,0.08)]
+                md:flex md:w-12 md:h-12 lg:w-auto md:p-1 md:my-4 lg:py-3 lg:px-16 hover:scale-105 active:scale-95 lg:hover:scale-100 hover:bg-indigo-600 transition duration-300
               "
               activeClass="material-symbols-filled"
             >

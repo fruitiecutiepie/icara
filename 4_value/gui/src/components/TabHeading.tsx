@@ -1,4 +1,4 @@
-import { A } from "@solidjs/router";
+import { A, useLocation } from "@solidjs/router";
 import { For, mergeProps } from "solid-js";
 
 type Props = {
@@ -9,6 +9,7 @@ type Props = {
 }
 
 export default function TabHeading(props: Props) {
+  const location = useLocation();
   const merged = mergeProps(props);
 
   const goBack = () => {
@@ -41,7 +42,10 @@ export default function TabHeading(props: Props) {
             class="w-1/3 flex items-center justify-center min-h-[3.5rem]"
           >
             <h2
-              class={`flex items-center text-lg md:text-xl font-display font-bold transition-opacity duration-300 md:opacity-100 ${merged.isVisible ? 'opacity-100' : 'opacity-0'}`}
+              class={`
+              flex items-center text-lg md:text-xl font-display font-bold transition-opacity duration-300 md:opacity-100
+              ${location.pathname !== '/scan' && (merged.isVisible ? 'opacity-100' : 'opacity-0')}
+              `}
             >
               {merged.heading}
             </h2>

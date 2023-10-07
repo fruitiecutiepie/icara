@@ -87,34 +87,38 @@ const App: Component = () => {
   
   return (
     <div
-      class="flex flex-col md:flex-row justify-center h-screen"
+      class="flex flex-col md:flex-row justify-between md:justify-center h-screen"
     >
       <div
-        class="sticky top-0 bottom-0 w-full order-2 md:order-1 md:w-auto lg:w-1/4"
+        class="order-1 md:order-2 flex flex-col w-full overflow-y-hidden md:w-2/3 lg:w-1/2 md:mx-5 md:border-l md:border-r"
+      >
+        <TabHeading {...routeConfig[location.pathname]} isVisible={isVisible()} />
+        <div
+          class="self-center overflow-y-auto w-full"
+          ref={el => {
+            scrollableDiv = el; 
+            el.addEventListener('scroll', handleScroll);
+          }}
+        >
+          <Routes>
+            <Route path={["/", "/home"]} component={Home} />
+            <Route path="/routine" component={Routine} />
+            <Route path="/items/storage" component={Storage} />
+            <Route path="/items/collection" component={Collection} />
+            <Route path="/items/archive" component={Archive} />
+            <Route path="/scan" component={Scan} />
+            <Route path="/notifications" component={Notifications} />
+            <Route path="/profile" component={Profile} />
+            <Route path="/settings" component={Settings} />
+          </Routes>
+        </div>
+      </div>
+      <div
+        class="sticky top-0 bottom-0 w-full order-2 lg:px-5 md:order-1 md:w-auto lg:w-1/4"
       >
         {location.pathname !== '/scan' && (
           <Tabs />
         )}
-      </div>
-      <TabHeading {...routeConfig[location.pathname]} isVisible={isVisible()} />
-      <div
-        class="self-center w-full overflow-y-auto order-1 md:order-2 md:mx-5 md:w-3/5 lg:w-1/2 md:border-l md:border-r"
-        ref={el => {
-          scrollableDiv = el; 
-          el.addEventListener('scroll', handleScroll);
-        }}
-      >
-        <Routes>
-          <Route path={["/", "/home"]} component={Home} />
-          <Route path="/routine" component={Routine} />
-          <Route path="/items/storage" component={Storage} />
-          <Route path="/items/collection" component={Collection} />
-          <Route path="/items/archive" component={Archive} />
-          <Route path="/scan" component={Scan} />
-          <Route path="/notifications" component={Notifications} />
-          <Route path="/profile" component={Profile} />
-          <Route path="/settings" component={Settings} />
-        </Routes>
       </div>
       <div
         class="lg:w-1/4 lg:order-3"
