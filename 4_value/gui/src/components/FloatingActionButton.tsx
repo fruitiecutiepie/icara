@@ -11,7 +11,7 @@ export default function FloatingActionButton(props: Props) {
   
   return (
     <div
-      class="flex justify-end right-5 bottom-16 absolute"
+      class="flex justify-end right-5 bottom-20 pb-safe fixed"
     >
       <A
         href={merged.path}

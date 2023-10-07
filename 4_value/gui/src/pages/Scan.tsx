@@ -4,7 +4,7 @@ import { A, Navigate } from '@solidjs/router';
 
 export default function Scan() {
   const [result, setResult] = createSignal("");
-  const [backCamera, setBackCamera] = createSignal<MediaDeviceInfo | undefined>(); // TODO: Use this to flip the video element
+  const [backCamera, setBackCamera] = createSignal(true);
   const [videoElement, setVideoElement] = createSignal<HTMLVideoElement | undefined>();
   
   const possibleFormats = [
@@ -20,22 +20,17 @@ export default function Scan() {
   onMount(async () => {
     const videoInputDevices = await codeReader.listVideoInputDevices();
 
-    if (!videoInputDevices.length) {
+    if (!videoInputDevices) {
       console.error('No video input devices found');
-      // TODO: Handle no camera better
+      alert('No camera detected on your device. Please ensure you have the necessary permissions enabled or try using a different device.');
       return;
     }
 
-    const backCamera = videoInputDevices.find(device =>
-      /back|rear/i.test(device.label)
-    );
-
-    setBackCamera(backCamera);
-
-    const selectedDeviceId = backCamera ? backCamera.deviceId : videoInputDevices[0].deviceId;
+    const backCamera = videoInputDevices.find(device => /back|rear/i.test(device.label));
+    // TODO: backCamera might be undefined even though there is a back camera
+    const selectedDeviceId = backCamera ? backCamera.deviceId : (setBackCamera(false), videoInputDevices[0].deviceId);
     console.log(`Started continuous decode from camera with id ${selectedDeviceId}`);
 
-    // Use the stored video element here
     codeReader.decodeFromVideoDevice(selectedDeviceId, videoElement(), (result, err) => {
       if (result) {
         console.log(result);
@@ -43,6 +38,7 @@ export default function Scan() {
       }
       if (err && !(err instanceof NotFoundException)) {
         console.error(err);
+        alert('An unexpected error occurred while scanning. Please try again.');
       }
       // TODO: Handle barcode format not supported
     });
@@ -61,15 +57,15 @@ export default function Scan() {
         >
         </video>
         <div
-          class="flex flex-col items-center justify-center absolute"
+          class="flex flex-col items-center justify-end absolute"
         >
           <div class="h-1/4 w-5/6 lg:w-1/3 lg:h-1/3 md:max-w-xs lg:max-h-48 border-2 border-white rounded-xl fixed"></div>
         </div>
         <div
-          class="flex flex-col w-full justify-center items-center top-0 h-14 py-5 md:h-auto"
+          class="flex flex-col w-full justify-center items-center"
         >
           <A
-            class="bottom-0 pb-safe w-full text-center font-display bg-transparent"
+            class="bottom-0 pb-safe w-full py-3 my-1 min-h-[3.5rem] text-center font-display bg-transparent"
             href="/items/add"
           >
             Skip

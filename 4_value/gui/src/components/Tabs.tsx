@@ -30,8 +30,8 @@ export default function Tabs() {
           <nav
             class="flex items-center justify-center w-full md:flex-col lg:items-start"
           >
-            <TabButton path="/home" icon="home" label="Home" noScroll />
-            <TabButton path="/routine" icon="routine" label="Routine" noScroll />
+            <TabButton path="/home" icon="home" label="Home" />
+            <TabButton path="/routine" icon="routine" label="Routine" />
             <div
               class="flex-col hidden w-full md:flex md:justify-start lg:items-start lg:self-start"
             >
@@ -44,7 +44,7 @@ export default function Tabs() {
             >
               <TabButton path="/items/collection" icon="shelves" label="Items" />
             </div>
-            <TabButton path="/notifications" icon="notifications" label="Notifications" noScroll />
+            <TabButton path="/notifications" icon="notifications" label="Notifications" />
             <A
               href="/profile"
               class="
@@ -54,13 +54,13 @@ export default function Tabs() {
               "
               activeClass="material-symbols-filled"
             >
-              <span
+              {/* <span
                 class="material-symbols-outlined self-center"
               >
                 person
-              </span>
+              </span> */}
               {/* TODO */}
-              {/* <img src={profile_picture} class="w-6 h-6 rounded-full" alt="profile_picture" /> */}
+              <img src={profile_picture} class="w-6 h-6 rounded-full" alt="profile_picture" />
               <span
                 class="text-xl font-display hidden lg:flex"
               >
