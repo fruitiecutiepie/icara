@@ -172,9 +172,28 @@ Let the retailers do the work to convince users that their products are best for
 
 ---
 
-Add products with text recognition
+Add products with text recognition for ingredient list
 How do beauty influencers store their cosmetics / keep them organised?
 How can I get the hex colour of something accurately?
+
+track usage -> there are two ways to do this: 1) regularly (every first/end of the month), 2) when user found out that their item is already 1/2. visualise usage? could be cool, something like the product being underwater kind of thing.
+
+track textures -> put them on a scale, you can use this to find out the type of the item, or the pleasantness of it. think about this again.
+
+make it an app that makes user becomes like beauty influencer so that people feel accountable? add friends and see what they're using. should be cool. user can upload their swatches and that'll be used for the whole community. search item will be a paid feature.
+
+match user profiles to items they **like** -> e.g., 70% of people with oily skins (dis)like this item. should be a paid feature, since utilises the unfair advantage of accumulated information, being the company. users logging items should not be limited (should be unlimited -> free), since that promotes the growth of the company.
+
+good value for the price? yes/no question
+repurchase field -> yes/no question
+
+have a page for each category to show ratings, one row per field -> 5–1 stars (horizontal scrolling for items)
+
+quantify pros and cons. make it a multi-select field.
+
+skin photo log is fine, but don't make it daily. a week/month is fine. should be good.
+
+good & bad ingredients/etc. for different skin types/etc.
 
 ## Non-functional requirements
 
