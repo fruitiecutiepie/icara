@@ -28,11 +28,11 @@
 		<true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>Scan item barcodes and take item pictures</string>
+	<string></string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>Export graphical app details to user's library</string>
+	<string></string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Import item thumbnail from user's library</string>
+	<string></string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
