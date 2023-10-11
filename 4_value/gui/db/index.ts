@@ -19,20 +19,6 @@ console.log('Hello from db/index.ts')
 
 // CRUD operations
 
-// Create
-const create = async () => {
-  const docRef = doc(db, 'users', 'abc');
-  const payload = {
-    name: 'Bob',
-    age: 23,
-    address: {
-      street: '123 Street',
-      city: 'New York',
-    },
-  };
-  await setDoc(docRef, payload);
-};
-
 // Read
 // const read = async () => {
 //   const docRef = doc(db, 'users', 'abc');
@@ -42,7 +28,7 @@ const create = async () => {
 
 // Update
 const update = async () => {
-  const docRef = doc(db, 'users', 'abc');
+  const docRef = doc(db, 'user', 'abc');
   const payload = {
     name: 'Bob',
     age: 23,
@@ -56,15 +42,17 @@ const update = async () => {
 
 // Delete
 const deleteDocument = async () => {
-  const docRef = doc(db, 'users', 'abc');
+  const docRef = doc(db, 'user', 'abc');
   await deleteDoc(docRef);
 }
 
-const addUser = async () => {
+const createUser = async () => {
   try {
-    const docRef = await addDoc(collection(db, "users"), {
-      first: "Ada",
-      last: "Lovelace",
+    const docRef = await addDoc(collection(db, "user"), {
+      firstName: "Audrey",
+      lastName: "Santoso",
+      emailAddress: 'audreysantoso15@gmail.com',
+
       born: 1815
     });
     console.log("Document written with ID: ", docRef.id);
@@ -73,10 +61,36 @@ const addUser = async () => {
   }
 }
 
-// addUser();
+const createItem = async () => {
+  try {
+    const docRef = await addDoc(collection(db, "item"), {
+      brandId: "12345",
+      categoryId: "54321",
+      name: "Neo Cushion Matte",
+      type: "Foundation",
+    });
+    console.log("Document written with ID: ", docRef.id);
+  } catch (e) {
+    console.error("Error adding document: ", e);
+  }
+}
+
+const createVariant = async () => {
+  try {
+    const docRef = await addDoc(collection(db, "variant"), {
+      itemId: "12345",
+      name: "Neo Cushion Matte",
+      shade: "21",
+      ingredients: [],
+    });
+    console.log("Document written with ID: ", docRef.id);
+  } catch (e) {
+    console.error("Error adding document: ", e);
+  }
+}
 
 const getUsers = async () => {
-  const querySnapshot = await getDocs(collection(db, "users"));
+  const querySnapshot = await getDocs(collection(db, "user"));
   querySnapshot.forEach((doc) => {
     console.dir(`${doc.id} => ${doc.data()}`, { depth: null });
   });

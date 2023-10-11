@@ -1,5 +1,5 @@
 {
-  "name": "firebase",
+  "name": "backend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,6 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "firebase": "^10.4.0"
+    "firebase": "^10.4.0",
+    "firebase-admin": "^11.11.0"
+  },
+  "devDependencies": {
+    "tsx": "^3.13.0"
   }
 }

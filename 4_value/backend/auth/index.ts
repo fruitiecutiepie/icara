@@ -1,7 +1,7 @@
 import { initializeApp } from 'firebase/app';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 
-import firebaseConfig from '../../../../2_admin/security/keys/firebase_config.json'
+import firebaseConfig from '../../../2_admin/security/keys/firebase_config.json'
 
 const firebaseApp = initializeApp(firebaseConfig);
 const auth = getAuth(firebaseApp);
