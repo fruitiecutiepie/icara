@@ -176,9 +176,18 @@ Add products with text recognition for ingredient list
 How do beauty influencers store their cosmetics / keep them organised?
 How can I get the hex colour of something accurately?
 
-track usage -> there are two ways to do this: 1) regularly (every first/end of the month), 2) when user found out that their item is already 1/2. visualise usage? could be cool, something like the product being underwater kind of thing.
+track usage -> there are two ways to do this: 1) regularly (every first/end of the month), 2) when user found out that their item is already 1/2. You can also just not tell user you're tracking this and only show them average usage (ml) for a product after they finish it. But if they don't finish their Item..., this becomes a problem lol. Visualise usage? could be cool, something like the product being underwater kind of thing.
+- reversed. the app should tell users how much to use a product so that they finish it on time. have a guide for this, e.g., 3 g = 1/4 of your finger or something like that. so when user add a new Item, they will automatically be asked to put it into a routine -> have an active field in Item to track this. based on that, you can calculate how much they should use the product. you can also remind user to use the product if it's opened but not active. edge cases include user might not follow the routine every time, have a daily routine checklist for this.
+
+Routine should be divided by days? or frequency? Should be frequency, probably, think about this again, and then show the routines user have in a form of calendar. The widget should look like a calendar as well. Routine will also contain products from all categories.
 
 track textures -> put them on a scale, you can use this to find out the type of the item, or the pleasantness of it. think about this again.
+- for pleasantness case, this will be connected to Review. Either user rates some attributes about the item, or, put different attributes in a multi-select field divided by Good and Bad (this might be more scalable).
+- also, for Review, can also add a field for comments (this might be in the Good and Bad section if multi-select didn't happen), and make it timestamp-based? so it's kind of like logging reviews. user can see when they made the comment. Should user be able to edit the comment? Delete? Make multiple comments? Think about this again.
+- Research different attributes for skincare, makeup, etc., e.g.: also, should user be able to customise this???
+	- Makeup: pigmentation, longevity, colour, etc.
+	- Skincare: efficacy, texture, smell, etc.
+- Have a feature to let User publish their Reviews? Have different User profiles for public and private? Public will be an influencer/business/professional account kind of thing in Instagram and Twitter. Have both? Or should User choose? Have a username for public accounts? Do we need to store real names? Maybe public account can also mean just share User's Active Collection and Routine at the moment? Maybe let User customise this as well, just like Dimensional?
 
 make it an app that makes user becomes like beauty influencer so that people feel accountable? add friends and see what they're using. should be cool. user can upload their swatches and that'll be used for the whole community. search item will be a paid feature.
 
@@ -194,6 +203,32 @@ quantify pros and cons. make it a multi-select field.
 skin photo log is fine, but don't make it daily. a week/month is fine. should be good.
 
 good & bad ingredients/etc. for different skin types/etc.
+
+There are multiple ways to structure the database.
+1. Make categories high-level order. This means store categories as collections and subcollections instead of documents inside collection. The question is, would these categories be stored differently for each user, or will we have the same categories for every user? If so, how much freedom should we give to user to edit them? Let user know that their change affects everybody. The question raised for this is, when a change is made, will it actually affect everyone? Can they choose whether to accept the change or not (reject)? If we have this option, do we need to review the change manually by calculating the majority votes? This can also apply for Item name, Brand name. If we do this, chances are User is going to be more careful when editing an Item detail. Since if others do the same, they will be affected by it. The database have a much greater chance of becoming cleaner. Seems that there is no drawback to making categories as detailed/granular as possible, as if the categories/type doesn't exist, Firestore will just not create them and they will not be stored in user information. But the item will still exist, and other user can use them. How can we access what categories and types an Item has? How can we access what categories and types of Items a User has? Store reference fields. Will this work? Should the collection/subcollection id be categories/types name??? Will this work? Can we get collection id? We should be able to do that right? What about document id? Should types always be a subcollection, or can they be documents?
+2. The question is, where will Item be stored? Under types, which are under categories. The former question determines this. If categories & types are stored as a higher order, how will Item be referenced in User? Item will need to be a higher order field, so UserItem should still have a reference to a higher-order global Item. How much freedom should we give to User to customise their Item details? E.g., an Item can have a universal name, but User might want to change their name for their own. A use case for this is if the Item has a different name in different languages/regions. This raises the question, how universal is an Item name? How rare/frequently do brands have different names for the same Item? Do they have a different barcode as well?
+3. Different barcodes for the same Item persist already with ItemVariants (although different names for the same Item will have different implications). This is why, Item is a collective view of what we think is the same Item. User should not log a new Item for every different shade of the same lipstick they buy.
+
+In Scan, after the barcode is recognised, have a little pop up of the item. And then have options to add Item manually (in case it's not the right item) / report the item (might as well), Add to Storage, Add to Collection. Add to Archive? Add to Wishlist?
+
+Home vs Collection page
+Home will show Item that is active, and Routine of the day/week. Collection will show all Item that is opened, regardless of whether they're active or not. Show a little sign for this?
+
+Your Item state workflow will probably be similar to email. Have a swipe action for Move, or Archive, etc. (maybe let User customise this? or is this overkill).
+
+I think your app problem is similar to a to-do list app problem. (Although this might not be true, because there are way more to-do list apps out there). Or you can compare this with browsers as well. Look how much different Arc browser is from Chrome or whatever. There are many ways to do the same thing. But often, there is a better/optimal way to do whatever it is you're trying to do. Your job is to find the good balance/equilibrium lol.
+
+Also, because of Review, you can have votes for an Item, and utilise User skin profile/preferences to display data to other users.
+
+Regarding Review, how granular do you want it to be? E.g., you can make/show User the comparison between different ratings that they gave to different Item with the same type before. Is this Item more viscous than this other Item? Again, this goes back to the question of Item attributes pleasantness/classification. But you can just do this for regular star ratings as well.
+
+Also, for Item submission, should we have a list where User can see all of their submissions? And, should submissions have an author marked on it with DOB (of the Item, of course), so to speak? Will this make User feel more accountable?
+
+Anything that helps make the app better should be free. The ramifications of the app being better should be paid.
+
+Following the previous logic, this means that User adding more and more Item is better for the company. And then we can't also make User pay to search for Item to add as well, since this would hinder the progress of adding more Item to the database. But maybe we can make User pay to search for Item details? But this can also probably only work once the app has a lot of users and can analyse ingredients/attributes/breadcrumbs/whatever about the Item. Hmm, how do we monetise the app for early days? 😂 Or maybe we'll just make it a charity work at first 😂, anyway if a lot of User uses the app, the ramifications described earlier is inevitable. This means monetisation will be inevitable.
+
+Also, study how to make forms more pleasant to fill for User. Maybe show a different page for different relevant sections so that User doesn't feel overwhelmed. Or have something like More arrow button. Ofc, have different logic when User adds to Storage vs Collection vs Archive, e.g., Storage means the Item is not opened, hence blablabla.
 
 ## Non-functional requirements
 

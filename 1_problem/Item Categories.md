@@ -13,26 +13,28 @@ The list must:
 
 THE DEFINITIVE LIST:
 1. Skincare
-	1. Cleanser
-	2. Exfoliator
-	3. Micellar Water
-	4. Toner
-	5. Essence
-	6. Serum
-	7. Moisturiser
-	8. Eye Cream
-	9. Spot Treatment
-	10. Sunscreen
-	11. Face Mist
-	12. Face Oil
-	13. Face Mask
-	14. Lip Care
+	1. Makeup Remover
+	2. Cleanser
+	3. Exfoliator
+	4. Micellar Water
+	5. Toner
+	6. Essence
+	7. Serum
+	8. Moisturiser
+	9. Eye Cream
+	10. Spot Treatment
+	11. Sunscreen
+	12. Face Mist
+	13. Face Oil
+	14. Face Mask
+	15. Lip Care
 2. Hair
 	1. Shampoo
 	2. Conditioner
 	3. Dry Shampoo
 	4. Hair Treatment
 	5. Hair Styling
+	6. Hair Colour
 3. Body
 	1. Body Wash
 	2. Body Exfoliator
@@ -40,44 +42,51 @@ THE DEFINITIVE LIST:
 	4. Body Moisturiser
 	5. Body Oil
 	6. Body Sunscreen
-	7. Deodorant
-	8. Hand Cream
-	9. Foot Cream
+	7. Self-Tanner
+	8. Deodorant
+	9. Hand Cream
+	10. Foot Cream
 4. Makeup
-	1. Makeup Remover
-	2. Face
+	1. Face
 		1. Primer
 		2. Color Corrector
 		3. Foundation
 		4. Concealer
-		5. Powder
 		6. Highlighter
 		7. Blush
 		8. Bronzer
 		9. Contour
-		10. Setting Spray
-	3. Eyes
+		10. Face Palette
+		11. Setting Powder
+		12. Setting Spray
+	2. Eyes
 		1. Mascara
 		2. Eyeshadow
 		3. Eyeliner
-	4. Brows
-	5. Lips
+	3. Brows
+		1. Brow Pencil
+		2. Brow Powder
+		3. Brow Pen
+		4. Brow Pomade
+		5. Brow Gel
+	4. Lips
 		1. Lipstick
 		2. Liquid Lipstick
 		3. Lip Tint
 		4. Lip Gloss
 		5. Lip Liner
 		6. Tinted Lip Balm
-5. Nails
+6. Nails
 	1. Nail Polish Remover
 	2. Base Coat
 	3. Nail Polish
 	4. Top Coat
 	5. Nail Treatment
-6. Fragrance
-	1. Perfume
-	2. Home Fragrance
-7. Tools
+7. Fragrance
+	1. Body Fragrance
+	2. Hair Fragrance
+	3. Home Fragrance
+8. Tools
 	1. Skincare Tools
 	2. Hair Tools
 	3. Body Tools
