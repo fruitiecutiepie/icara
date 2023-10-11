@@ -35,14 +35,14 @@ export default function Tabs() {
             <div
               class="flex-col hidden w-full md:flex md:justify-start lg:items-start lg:self-start"
             >
-              <TabButton path="/items/storage" icon="home_storage" label="Storage" />
-              <TabButton path="/items/collection" icon="shelves" label="Collection" />
-              <TabButton path="/items/archive" icon="archive" label="Archive" />
+              <TabButton path="/storage" icon="home_storage" label="Storage" />
+              <TabButton path="/collection" icon="shelves" label="Collection" />
+              <TabButton path="/archive" icon="archive" label="Archive" />
             </div>
             <div
               class="flex md:hidden"
             >
-              <TabButton path="/items/collection" icon="shelves" label="Items" />
+              <TabButton path="/collection" icon="shelves" label="Items" />
             </div>
             <TabButton path="/notifications" icon="notifications" label="Notifications" />
             <A

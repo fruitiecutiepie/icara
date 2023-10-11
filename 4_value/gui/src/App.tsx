@@ -27,17 +27,17 @@ const App: Component = () => {
         [{ icon: "settings", path: "/settings/routine" }] :
         [{ icon: "settings", path: "/settings/routine" }, { icon: "shadow_add", path: "/routine/add" }]
     },
-    '/items/storage': {
+    '/storage': {
       heading: 'Storage',
       goBack: true,
     },
-    '/items/collection': {
+    '/collection': {
       heading: 'Collection',
       icon_path: isSmScreen ?
-      [{ icon: "archive", path: "/items/archive" }, { icon: "home_storage", path: "/items/storage" }] :
+      [{ icon: "archive", path: "/archive" }, { icon: "home_storage", path: "/storage" }] :
       [{ icon: "shadow_add", path: "/items/add" }]
     },
-    '/items/archive': {
+    '/archive': {
       heading: 'Archive',
       goBack: true,
     },
@@ -94,7 +94,7 @@ const App: Component = () => {
       >
         <TabHeading {...routeConfig[location.pathname]} isVisible={isVisible()} />
         <div
-          class="self-center overflow-y-auto w-full"
+          class="self-center overflow-y-auto w-full h-screen"
           ref={el => {
             scrollableDiv = el; 
             el.addEventListener('scroll', handleScroll);
@@ -103,9 +103,9 @@ const App: Component = () => {
           <Routes>
             <Route path={["/", "/home"]} component={Home} />
             <Route path="/routine" component={Routine} />
-            <Route path="/items/storage" component={Storage} />
-            <Route path="/items/collection" component={Collection} />
-            <Route path="/items/archive" component={Archive} />
+            <Route path="/storage" component={Storage} />
+            <Route path="/collection" component={Collection} />
+            <Route path="/archive" component={Archive} />
             <Route path="/scan" component={Scan} />
             <Route path="/notifications" component={Notifications} />
             <Route path="/profile" component={Profile} />
