@@ -6,15 +6,15 @@
     "Micellar Water",
     "Toner",
     "Essence",
-    "Serum",
-    "Moisturiser",
-    "Eye Cream",
-    "Spot Treatment",
-    "Sunscreen",
     "Face Mist",
+    "Serum",
+    "Spot Treatment",
     "Face Oil",
     "Face Mask",
-    "Lip Care"
+    "Moisturiser",
+    "Eye Cream",
+    "Lip Care",
+    "Sunscreen"
   ],
   "Hair": [
     "Shampoo",
@@ -27,50 +27,43 @@
   "Body": [
     "Body Wash",
     "Body Exfoliator",
+    "Shaving",
     "Body Serum",
     "Body Moisturiser",
     "Body Oil",
+    "Hand Cream",
+    "Foot Cream",
     "Body Sunscreen",
     "Self-Tanner",
-    "Deodorant",
-    "Hand Cream",
-    "Foot Cream"
+    "Deodorant"
   ],
-  "Makeup": {
-    "Face": [
-      "Primer",
-      "Color Corrector",
-      "Foundation",
-      "Concealer",
-      "Highlighter",
-      "Blush",
-      "Bronzer",
-      "Contour",
-      "Face Palette",
-      "Setting Powder",
-      "Setting Spray"
-    ],
-    "Eyes": [
-      "Mascara",
-      "Eyeshadow",
-      "Eyeliner"
-    ],
-    "Brows": [
-      "Brow Pencil",
-      "Brow Powder",
-      "Brow Pen",
-      "Brow Pomade",
-      "Brow Gel"
-    ],
-    "Lips": [
-      "Lipstick",
-      "Liquid Lipstick",
-      "Lip Tint",
-      "Lip Gloss",
-      "Lip Liner",
-      "Tinted Lip Balm"
-    ]
-  },
+  "Makeup": [
+    "Primer",
+    "Color Corrector",
+    "Foundation",
+    "Concealer",
+    "Blush",
+    "Bronzer",
+    "Contour",
+    "Highlighter",
+    "Face Palette",
+    "Setting Powder",
+    "Setting Spray",
+    "Mascara",
+    "Eyeshadow",
+    "Eyeliner",
+    "Brow Pencil",
+    "Brow Powder",
+    "Brow Pen",
+    "Brow Pomade",
+    "Brow Gel",
+    "Lipstick",
+    "Liquid Lipstick",
+    "Lip Tint",
+    "Lip Gloss",
+    "Lip Liner",
+    "Tinted Lip Balm"
+  ],
   "Nails": [
     "Nail Polish Remover",
     "Base Coat",
