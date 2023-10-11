@@ -1,0 +1,93 @@
+{
+  "Skin": [
+    "Makeup Remover",
+    "Cleanser",
+    "Exfoliator",
+    "Micellar Water",
+    "Toner",
+    "Essence",
+    "Serum",
+    "Moisturiser",
+    "Eye Cream",
+    "Spot Treatment",
+    "Sunscreen",
+    "Face Mist",
+    "Face Oil",
+    "Face Mask",
+    "Lip Care"
+  ],
+  "Hair": [
+    "Shampoo",
+    "Conditioner",
+    "Dry Shampoo",
+    "Hair Treatment",
+    "Hair Styling",
+    "Hair Colour"
+  ],
+  "Body": [
+    "Body Wash",
+    "Body Exfoliator",
+    "Body Serum",
+    "Body Moisturiser",
+    "Body Oil",
+    "Body Sunscreen",
+    "Self-Tanner",
+    "Deodorant",
+    "Hand Cream",
+    "Foot Cream"
+  ],
+  "Makeup": {
+    "Face": [
+      "Primer",
+      "Color Corrector",
+      "Foundation",
+      "Concealer",
+      "Highlighter",
+      "Blush",
+      "Bronzer",
+      "Contour",
+      "Face Palette",
+      "Setting Powder",
+      "Setting Spray"
+    ],
+    "Eyes": [
+      "Mascara",
+      "Eyeshadow",
+      "Eyeliner"
+    ],
+    "Brows": [
+      "Brow Pencil",
+      "Brow Powder",
+      "Brow Pen",
+      "Brow Pomade",
+      "Brow Gel"
+    ],
+    "Lips": [
+      "Lipstick",
+      "Liquid Lipstick",
+      "Lip Tint",
+      "Lip Gloss",
+      "Lip Liner",
+      "Tinted Lip Balm"
+    ]
+  },
+  "Nails": [
+    "Nail Polish Remover",
+    "Base Coat",
+    "Nail Polish",
+    "Top Coat",
+    "Nail Treatment"
+  ],
+  "Fragrance": [
+    "Body Fragrance",
+    "Hair Fragrance",
+    "Home Fragrance"
+  ],
+  "Tools": [
+    "Skin Tools",
+    "Hair Tools",
+    "Body Tools",
+    "Makeup Tools",
+    "Nail Tools"
+  ]
+}
