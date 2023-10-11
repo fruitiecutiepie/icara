@@ -8,7 +8,7 @@ export default function Settings() {
     >
       <PageHeading heading="Settings" />
       <div
-        class="pt-5 px-5 h-screen"
+        class="pt-5 px-5 min-h-screen"
       ></div>
     </div>
   );

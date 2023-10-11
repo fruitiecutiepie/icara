@@ -10,7 +10,7 @@ export default function Storage() {
       <PageHeading heading="Storage" />
       <FloatingActionButton path="/scan" icon="barcode_scanner" />
       <div
-        class="pt-5 px-5 h-screen"
+        class="pt-5 px-5 min-h-screen"
       ></div>
     </div>
   );
