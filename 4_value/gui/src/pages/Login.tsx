@@ -1,9 +1,9 @@
 import { A } from "@solidjs/router";
 import { createSignal } from "solid-js";
-import { onAuthStateChanged, signInWithEmailAndPassword } from 'firebase/auth';
+import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebaseClientInit'
 
-export default function SignIn() {
+export default function Login() {
   const [formData, setFormData] = createSignal({
     email: '',
     password: '',
@@ -18,18 +18,11 @@ export default function SignIn() {
         // ...
       })
       .catch((err) => {
+        console.log(err.code)
+        console.log(err.message)
         setError("Incorrect. Please try again.")
-        // setError(err.code + err.message)
       });
   }
-  
-  onAuthStateChanged(auth, (user) => {
-    if (user) {
-      console.log('User is signed in');
-    } else {
-      console.log('User is signed out');
-    }
-  });
 
   return (
     <div

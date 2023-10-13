@@ -4,6 +4,7 @@ import { auth } from '../firebaseClientInit'
 
 export default function SignIn() {
   const [email, setEmail] = createSignal('');
+  const [error, setError] = createSignal('');
   const [result, setResult] = createSignal('');
   
   const resetPassword = () => {
@@ -37,22 +38,30 @@ export default function SignIn() {
                 placeholder={"Email address"}
                 autocomplete="email"
                 value={email()}
-                onInput={(e) => setEmail(e.currentTarget.value)}
+                onInput={(e) => {
+                  setEmail(e.currentTarget.value);
+                  if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(e.currentTarget.value)) {
+                    setError("Invalid email address");
+                  } else {
+                    setError("");
+                  }
+                }}
                 class="border-x-0 border-t-0 border-b bg-transparent w-full my-2 py-2 px-4 focus:ring-0 focus:outline-none focus:border-indigo-500 autofill:bg-transparent"
               />
             </div>
-            {result() && <div class="text-sm mt-2 text-red-500">{result()}</div>}
+            {error() && <div class="text-sm mb-2 text-red-500">{error()}</div>}
           </div>
           <div 
             class="flex flex-col items-center"
-          >
+            >
             <button type="submit"
               onClick={resetPassword}
-              disabled={!email()}
+              disabled={!email() || !!error()}
               class="flex items-center justify-center rounded-full text-white font-display bg-indigo-500 w-full my-4 py-3 disabled:bg-indigo-300 hover:bg-indigo-600 transition duration-300"
-            >
+              >
               Send password reset link
             </button>
+            {result() && <div class="text-sm text-green-500 self-center">{result()}</div>}
           </div>
         </form>
       </div>

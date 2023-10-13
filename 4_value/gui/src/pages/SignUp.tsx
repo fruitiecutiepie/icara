@@ -14,7 +14,6 @@ export default function SignUp() {
     password: '',
     confirmPassword: '',
   });
-  const [signUpError, setSignUpError] = createSignal('');
 
   const hasErrors = () => {
     return (!!errors().email || !!errors().password || !!errors().confirmPassword) ||
@@ -29,7 +28,8 @@ export default function SignUp() {
         // ...
       })
       .catch((err) => {
-        setSignUpError(err.code + err.message);
+        console.log(err.code);
+        console.log(err.message);
       });
   }
 
@@ -121,7 +121,6 @@ export default function SignUp() {
             >
               Sign Up
             </button>
-          {signUpError() && <div class="text-sm text-red-500 self-center">{signUpError()}</div>}
           </div>
           <div
             class="flex flex-col text-sm mt-8 items-center"
