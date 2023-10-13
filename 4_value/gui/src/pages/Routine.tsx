@@ -1,9 +1,9 @@
 import { addDoc, collection } from "firebase/firestore";
 import { createResource, createSignal } from "solid-js";
-import db from "../../db";
 import TabHeading from "../components/TabHeading";
 import FloatingActionButton from "../components/FloatingActionButton";
 import PageHeading from "../components/PageHeading";
+import { db } from '../firebaseClientInit'
 
 export default function Routine() {
   const [name, setName] = createSignal("");

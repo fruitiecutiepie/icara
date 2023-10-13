@@ -1,6 +1,4 @@
-import { initializeApp } from 'firebase/app';
 import {
-  getFirestore,
   connectFirestoreEmulator,
   doc,
   collection,
@@ -9,10 +7,8 @@ import {
   addDoc,
   getDocs,
 } from 'firebase/firestore';
-import firebaseConfig from '../../../2_admin/security/keys/firebase_config.json'
+import { db } from '../firebaseClientInit';
 
-const firebaseApp = initializeApp(firebaseConfig);
-const db = getFirestore(firebaseApp);
 connectFirestoreEmulator(db, 'localhost', 8080);
 
 console.log('Hello from db/index.ts')

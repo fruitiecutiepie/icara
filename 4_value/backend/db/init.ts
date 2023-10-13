@@ -1,7 +1,7 @@
 import brands from './meta.item.brand.json';
 import categories from './meta.item.category.json'
 import items from './item.json'
-import { db } from '../firebase_admin'
+import { db } from '../firebaseAdminInit'
 
 (() => {
   const batch = db.batch();
