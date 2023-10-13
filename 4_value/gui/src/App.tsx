@@ -10,7 +10,9 @@ import Profile from './pages/Profile';
 import Storage from './pages/Storage';
 import Archive from './pages/Archive';
 import Settings from './pages/Settings';
-import Login from './pages/Login';
+import SignIn from './pages/SignIn';
+import SignUp from './pages/SignUp';
+import Forgot from './pages/Forgot';
 import Tabs from './components/Tabs';
 import TabHeading from './components/TabHeading';
 
@@ -18,7 +20,7 @@ import TabHeading from './components/TabHeading';
 const App: Component = () => {
   const location = useLocation();
   const isSmScreen = window.innerWidth < 768;
-  const fullScreenRoutes = ['/scan', '/login', '/signup']
+  const fullScreenRoutes = ['/scan', '/signin', '/signup', '/forgot']
   
   const routeConfig = {
     '/': { heading: 'Home' },
@@ -112,7 +114,9 @@ const App: Component = () => {
             <Route path="/notifications" component={Notifications} />
             <Route path="/profile" component={Profile} />
             <Route path="/settings" component={Settings} />
-            <Route path="/login" component={Login} />
+            <Route path="/signin" component={SignIn} />
+            <Route path="/signup" component={SignUp} />
+            <Route path="/forgot" component={Forgot} />
           </Routes>
         </div>
       </div>
