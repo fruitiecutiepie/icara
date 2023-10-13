@@ -1,5 +1,8 @@
 import { createSignal, type Component, onCleanup, Show } from 'solid-js';
 import { Routes, Route, useLocation } from '@solidjs/router';
+import { onAuthStateChanged } from 'firebase/auth';
+import { auth } from './firebaseClientInit';
+import { setUser } from './store/user';
 
 import Home from './pages/Home';
 import Routine from './pages/Routine';
@@ -10,17 +13,24 @@ import Profile from './pages/Profile';
 import Storage from './pages/Storage';
 import Archive from './pages/Archive';
 import Settings from './pages/Settings';
-import SignIn from './pages/SignIn';
+import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 import ForgotPassword from './pages/ForgotPassword';
 import Tabs from './components/Tabs';
 import TabHeading from './components/TabHeading';
 
-
 const App: Component = () => {
   const location = useLocation();
   const isSmScreen = window.innerWidth < 768;
-  const fullScreenRoutes = ['/scan', '/signin', '/signup', '/forgot']
+  const fullScreenRoutes = ['/scan', '/login', '/signup', '/forgot']
+
+  const unsubscribe = onAuthStateChanged(auth, (user) => {
+    if (user) {
+      setUser(user)
+    } else {
+      setUser(null)
+    }
+  });
   
   const routeConfig = {
     '/': { heading: 'Home' },
@@ -90,6 +100,7 @@ const App: Component = () => {
 
   onCleanup(() => {
     scrollableDiv.removeEventListener('scroll', handleScroll);
+    unsubscribe();
   })
   
   return (
@@ -117,7 +128,7 @@ const App: Component = () => {
             <Route path="/notifications" component={Notifications} />
             <Route path="/profile" component={Profile} />
             <Route path="/settings" component={Settings} />
-            <Route path="/signin" component={SignIn} />
+            <Route path="/login" component={Login} />
             <Route path="/signup" component={SignUp} />
             <Route path="/forgot" component={ForgotPassword} />
           </Routes>
