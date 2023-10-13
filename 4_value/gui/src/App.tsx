@@ -1,5 +1,5 @@
-import { createSignal, type Component, onCleanup, For } from 'solid-js';
-import { Routes, Route, useLocation, A } from '@solidjs/router';
+import { createSignal, type Component, onCleanup, Show } from 'solid-js';
+import { Routes, Route, useLocation } from '@solidjs/router';
 
 import Home from './pages/Home';
 import Routine from './pages/Routine';
@@ -10,6 +10,7 @@ import Profile from './pages/Profile';
 import Storage from './pages/Storage';
 import Archive from './pages/Archive';
 import Settings from './pages/Settings';
+import Login from './pages/Login';
 import Tabs from './components/Tabs';
 import TabHeading from './components/TabHeading';
 
@@ -17,6 +18,7 @@ import TabHeading from './components/TabHeading';
 const App: Component = () => {
   const location = useLocation();
   const isSmScreen = window.innerWidth < 768;
+  const fullScreenRoutes = ['/scan', '/login', '/signup']
   
   const routeConfig = {
     '/': { heading: 'Home' },
@@ -110,15 +112,16 @@ const App: Component = () => {
             <Route path="/notifications" component={Notifications} />
             <Route path="/profile" component={Profile} />
             <Route path="/settings" component={Settings} />
+            <Route path="/login" component={Login} />
           </Routes>
         </div>
       </div>
       <div
         class="sticky top-0 bottom-0 w-full order-2 lg:px-5 md:order-1 md:w-auto lg:w-1/4"
       >
-        {location.pathname !== '/scan' && (
+        <Show when={!fullScreenRoutes.includes(location.pathname)}>
           <Tabs />
-        )}
+        </Show>
       </div>
       <div
         class="lg:w-1/4 lg:order-3"
