@@ -12,7 +12,7 @@ import Archive from './pages/Archive';
 import Settings from './pages/Settings';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
-import Forgot from './pages/Forgot';
+import ForgotPassword from './pages/ForgotPassword';
 import Tabs from './components/Tabs';
 import TabHeading from './components/TabHeading';
 
@@ -59,6 +59,9 @@ const App: Component = () => {
     },
     '/settings': {
       heading: 'Settings',
+      goBack: true,
+    },
+    '/forgot': {
       goBack: true,
     },
   }
@@ -116,7 +119,7 @@ const App: Component = () => {
             <Route path="/settings" component={Settings} />
             <Route path="/signin" component={SignIn} />
             <Route path="/signup" component={SignUp} />
-            <Route path="/forgot" component={Forgot} />
+            <Route path="/forgot" component={ForgotPassword} />
           </Routes>
         </div>
       </div>
