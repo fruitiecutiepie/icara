@@ -1,7 +1,7 @@
 import { A } from "@solidjs/router";
 import { createSignal } from "solid-js";
 import { signInWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../firebaseClientInit'
+import { auth } from '../common/firebaseClientInit'
 
 export default function Login() {
   const [formData, setFormData] = createSignal({
@@ -15,7 +15,7 @@ export default function Login() {
       .then((userCredential) => {
         // Signed in 
         const user = userCredential.user;
-        // ...
+        console.log(user)
       })
       .catch((err) => {
         console.log(err.code)

@@ -1,6 +1,6 @@
 import { A } from '@solidjs/router';
-import logo from '../../../../1_problem/assets/icon.svg';
-import profile_picture from '../../../../1_problem/assets/profile_picture.png';
+import logo from '../../assets/logo.svg';
+import profile from '../../assets/profile.png';
 import TabButton from './TabButton';
 
 export default function Tabs() {
@@ -60,7 +60,7 @@ export default function Tabs() {
                 person
               </span> */}
               {/* TODO */}
-              <img src={profile_picture} class="w-6 h-6 rounded-full" alt="profile_picture" />
+              <img src={profile} class="w-6 h-6 rounded-full" alt="User's profile picture" />
               <span
                 class="text-xl font-display hidden lg:flex"
               >

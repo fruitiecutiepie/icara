@@ -1,6 +1,6 @@
 import { createSignal } from "solid-js";
 import { sendPasswordResetEmail } from 'firebase/auth';
-import { auth } from '../firebaseClientInit'
+import { auth } from '../common/firebaseClientInit'
 
 export default function SignIn() {
   const [email, setEmail] = createSignal('');

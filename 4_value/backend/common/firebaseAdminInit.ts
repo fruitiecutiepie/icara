@@ -1,7 +1,7 @@
 import admin, { ServiceAccount } from 'firebase-admin';
 
 // Load service account key
-import serviceAccount from '../../2_admin/security/keys/firebase_admin_config.json';
+import serviceAccount from '../../../2_admin/security/keys/firebase_admin_config.json';
 
 // Initialize the app with a service account
 admin.initializeApp({

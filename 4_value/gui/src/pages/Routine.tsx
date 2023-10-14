@@ -3,7 +3,7 @@ import { createResource, createSignal } from "solid-js";
 import TabHeading from "../components/TabHeading";
 import FloatingActionButton from "../components/FloatingActionButton";
 import PageHeading from "../components/PageHeading";
-import { db } from '../firebaseClientInit'
+import { db } from '../common/firebaseClientInit'
 
 export default function Routine() {
   const [name, setName] = createSignal("");

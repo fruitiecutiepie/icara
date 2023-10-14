@@ -1,8 +1,8 @@
 import { createSignal, type Component, onCleanup, Show } from 'solid-js';
-import { Routes, Route, useLocation } from '@solidjs/router';
+import { Routes, Route, useLocation, Navigate } from '@solidjs/router';
 import { onAuthStateChanged } from 'firebase/auth';
-import { auth } from './firebaseClientInit';
-import { setUser } from './store/user';
+import { auth } from './common/firebaseClientInit';
+import { user, setUser } from './common/userStore';
 
 import Home from './pages/Home';
 import Routine from './pages/Routine';
@@ -26,9 +26,12 @@ const App: Component = () => {
 
   const unsubscribe = onAuthStateChanged(auth, (user) => {
     if (user) {
-      setUser(user)
+      setUser(user);
+      console.log('User is signed in');
+      console.log(user);
     } else {
-      setUser(null)
+      setUser(null);
+      console.log('User is signed out');
     }
   });
   
@@ -119,15 +122,17 @@ const App: Component = () => {
           }}
         >
           <Routes>
-            <Route path={["/", "/home"]} component={Home} />
-            <Route path="/routine" component={Routine} />
-            <Route path="/storage" component={Storage} />
-            <Route path="/collection" component={Collection} />
-            <Route path="/archive" component={Archive} />
-            <Route path="/scan" component={Scan} />
-            <Route path="/notifications" component={Notifications} />
-            <Route path="/profile" component={Profile} />
-            <Route path="/settings" component={Settings} />
+            <Show when={user()} fallback={<Navigate href={'/login'} />}>
+              <Route path={["/", "/home"]} component={Home} />
+              <Route path="/routine" component={Routine} />
+              <Route path="/storage" component={Storage} />
+              <Route path="/collection" component={Collection} />
+              <Route path="/archive" component={Archive} />
+              <Route path="/scan" component={Scan} />
+              <Route path="/notifications" component={Notifications} />
+              <Route path="/profile" component={Profile} />
+              <Route path="/settings" component={Settings} />
+            </Show>
             <Route path="/login" component={Login} />
             <Route path="/signup" component={SignUp} />
             <Route path="/forgot" component={ForgotPassword} />

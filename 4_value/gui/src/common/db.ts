@@ -7,7 +7,7 @@ import {
   addDoc,
   getDocs,
 } from 'firebase/firestore';
-import { db } from '../firebaseClientInit';
+import { db } from './firebaseClientInit';
 
 connectFirestoreEmulator(db, 'localhost', 8080);
 
