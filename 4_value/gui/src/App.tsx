@@ -32,6 +32,7 @@ const App: Component = () => {
     } else {
       setUser(null);
       console.log('User is signed out');
+      console.log(user);
     }
   });
   
@@ -133,9 +134,11 @@ const App: Component = () => {
               <Route path="/profile" component={Profile} />
               <Route path="/settings" component={Settings} />
             </Show>
-            <Route path="/login" component={Login} />
-            <Route path="/signup" component={SignUp} />
-            <Route path="/forgot" component={ForgotPassword} />
+            <Show when={!user()} fallback={<Navigate href={'/home'} />}>
+              <Route path="/login" component={Login} />
+              <Route path="/signup" component={SignUp} />
+              <Route path="/forgot" component={ForgotPassword} />
+            </Show>
           </Routes>
         </div>
       </div>
