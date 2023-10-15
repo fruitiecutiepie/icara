@@ -1,6 +1,6 @@
 import { A } from "@solidjs/router";
 import { createSignal } from "solid-js";
-import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword, sendEmailVerification } from 'firebase/auth';
 import { auth } from '../common/firebaseClientInit'
 import logo from '../../assets/logo.svg'
 
@@ -25,9 +25,8 @@ export default function SignUp() {
   const signUp = () => {
     createUserWithEmailAndPassword(auth, formData().email, formData().password)
       .then((userCredential) => {
-        // Signed in 
         const user = userCredential.user;
-        console.log(user)
+        sendEmailVerification(user);
       })
       .catch((err) => {
         console.log(err.code);
