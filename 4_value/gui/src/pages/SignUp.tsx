@@ -2,6 +2,7 @@ import { A } from "@solidjs/router";
 import { createSignal } from "solid-js";
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../common/firebaseClientInit'
+import logo from '../../assets/logo.svg'
 
 export default function SignUp() {
   const [formData, setFormData] = createSignal({
@@ -9,14 +10,15 @@ export default function SignUp() {
     password: '',
     confirmPassword: '',
   });
-  const [errors, setErrors] = createSignal({
+  const [formErrors, setFormErrors] = createSignal({
     email: '',
     password: '',
     confirmPassword: '',
   });
+  const [error, setError] = createSignal('');
 
-  const hasErrors = () => {
-    return (!!errors().email || !!errors().password || !!errors().confirmPassword) ||
+  const hasFormErrors = () => {
+    return (!!formErrors().email || !!formErrors().password || !!formErrors().confirmPassword) ||
       (!formData().email || !formData().password || !formData().confirmPassword);
   }
   
@@ -30,13 +32,21 @@ export default function SignUp() {
       .catch((err) => {
         console.log(err.code);
         console.log(err.message);
+        if (err.code === 'auth/email-already-in-use') {
+          setError("Account already exists. Please log in.")
+        } else {
+          setError("An error occurred. Please try again.")
+        }
       });
   }
 
   return (
     <div
-      class="flex flex-col pt-5 px-5"
+      class="flex flex-col pt-5 px-5 pb-safe"
     >
+      <img src={logo} alt="Logo"
+          class="h-24 pb-5"
+        />
       <h1
         class="font-display font-bold text-4xl text-center mb-4"
       >
@@ -57,14 +67,14 @@ export default function SignUp() {
                 onInput={(e) => {
                   setFormData(prev => ({ ...prev, email: e.currentTarget.value }))
                   if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(e.currentTarget.value)) {
-                    setErrors(prev => ({ ...prev, email: "Invalid email address" }));
+                    setFormErrors(prev => ({ ...prev, email: "Invalid email address" }));
                   } else {
-                    setErrors(prev => ({ ...prev, email: "" }));
+                    setFormErrors(prev => ({ ...prev, email: "" }));
                   }
                 }}
                 class="border-x-0 border-t-0 border-b bg-transparent w-full my-2 py-2 px-4 focus:ring-0 focus:outline-none focus:border-indigo-500 autofill:bg-transparent"
                 />
-              {errors().email && <div class="text-sm mb-2 self-start text-red-500">{errors().email}</div>}
+              {formErrors().email && <div class="text-sm mb-2 self-start text-red-500">{formErrors().email}</div>}
               <input
                 type="password"
                 required
@@ -78,20 +88,20 @@ export default function SignUp() {
                     !/[a-z]/.test(e.currentTarget.value) ||
                     !/[0-9]/.test(e.currentTarget.value) ||
                     !/[!@#$%^&*]/.test(e.currentTarget.value)) {
-                    setErrors(prev => ({ ...prev, password: "Password must have min. 8 chars, 1 uppercase, 1 lowercase, 1 number, and 1 special character" }));
+                    setFormErrors(prev => ({ ...prev, password: "Password must have min. 8 chars, 1 uppercase, 1 lowercase, 1 number, and 1 special character" }));
                   } else {
-                    setErrors(prev => ({ ...prev, password: "" }));
+                    setFormErrors(prev => ({ ...prev, password: "" }));
                   }
 
                   if (formData().password !== formData().confirmPassword) {
-                    setErrors(prev => ({ ...prev, confirmPassword: "Passwords must match" }));
+                    setFormErrors(prev => ({ ...prev, confirmPassword: "Passwords must match" }));
                   } else {
-                    setErrors(prev => ({ ...prev, confirmPassword: "" }));
+                    setFormErrors(prev => ({ ...prev, confirmPassword: "" }));
                   }
                 }}
                 class="border-x-0 border-t-0 border-b bg-transparent w-full my-2 py-2 px-4 focus:ring-0 focus:outline-none focus:border-indigo-500"
               />
-              {errors().password && <div class="text-sm mb-2 self-start text-red-500">{errors().password}</div>}
+              {formErrors().password && <div class="text-sm mb-2 self-start text-red-500">{formErrors().password}</div>}
               <input
                 type="password"
                 required
@@ -101,37 +111,42 @@ export default function SignUp() {
                 onInput={(e) => {
                   setFormData(prev => ({ ...prev, confirmPassword: e.currentTarget.value }))
                   if (formData().password !== formData().confirmPassword) {
-                    setErrors(prev => ({ ...prev, confirmPassword: "Passwords must match" }));
+                    setFormErrors(prev => ({ ...prev, confirmPassword: "Passwords must match" }));
                   } else {
-                    setErrors(prev => ({ ...prev, confirmPassword: "" }));
+                    setFormErrors(prev => ({ ...prev, confirmPassword: "" }));
                   }
                 }}
                 class="border-x-0 border-t-0 border-b bg-transparent w-full my-2 py-2 px-4 focus:ring-0 focus:outline-none focus:border-indigo-500"
               />
-              {errors().confirmPassword && <div class="text-sm mb-2 self-start text-red-500">{errors().confirmPassword}</div>}
+              {formErrors().confirmPassword && <div class="text-sm mb-2 self-start text-red-500">{formErrors().confirmPassword}</div>}
             </div>
+            {error() && <div class="text-sm mt-2 text-red-500">{error()}</div>}
           </div>
           <div 
             class="flex flex-col items-center"
           >
             <button type="submit"
               onClick={signUp}
-              disabled={hasErrors()}
+              disabled={hasFormErrors()}
               class="flex items-center justify-center rounded-full text-white text-xl font-display bg-indigo-500 w-full my-4 py-3 disabled:bg-indigo-300 hover:bg-indigo-600 transition duration-300"
             >
               Sign Up
             </button>
           </div>
           <div
-            class="flex flex-col text-sm mt-8 items-center"
-          >
-            <p>
-              Already a user? 
-              <A href="/signin" class="text-indigo-500">
-                Log in
-              </A>
-            </p>
-          </div>
+              class="flex flex-col w-full min-h-[3.5rem] justify-center text-sm mt-8 items-center"
+            >
+              <p
+                class="w-full text-center"
+              >
+                Already a user? 
+                <A href="/login"
+                  class="text-indigo-500"
+                >
+                  Log in
+                </A>
+              </p>
+            </div>
         </form>
       </div>
     </div>

@@ -1,6 +1,6 @@
 import { A } from '@solidjs/router';
 import logo from '../../assets/logo.svg';
-import profile from '../../assets/profile.png';
+import profile from '../../assets/profile.jpg';
 import TabButton from './TabButton';
 
 export default function Tabs() {

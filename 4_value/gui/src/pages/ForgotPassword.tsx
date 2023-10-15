@@ -4,6 +4,7 @@ import { auth } from '../common/firebaseClientInit'
 
 export default function SignIn() {
   const [email, setEmail] = createSignal('');
+  const [formError, setFormError] = createSignal('');
   const [error, setError] = createSignal('');
   const [result, setResult] = createSignal('');
   
@@ -13,13 +14,15 @@ export default function SignIn() {
         setResult("Password reset email sent!")
       })
       .catch((err) => {
-        setResult(err.code + err.message)
+        console.log(err.code);
+        console.log(err.message);
+        setError("An error occurred. Please try again.")
       });
   }
 
   return (
     <div
-      class="flex flex-col pt-5 px-5"
+      class="flex flex-col pt-5 px-5 pb-safe"
     >
       <h1
         class="font-display font-bold text-xl text-center mb-2"
@@ -41,27 +44,28 @@ export default function SignIn() {
                 onInput={(e) => {
                   setEmail(e.currentTarget.value);
                   if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(e.currentTarget.value)) {
-                    setError("Invalid email address");
+                    setFormError("Invalid email address");
                   } else {
-                    setError("");
+                    setFormError("");
                   }
                 }}
                 class="border-x-0 border-t-0 border-b bg-transparent w-full my-2 py-2 px-4 focus:ring-0 focus:outline-none focus:border-indigo-500 autofill:bg-transparent"
               />
+              {formError() && <div class="text-sm mb-2 self-start text-red-500">{formError()}</div>}
             </div>
-            {error() && <div class="text-sm mb-2 text-red-500">{error()}</div>}
+            {error() && <div class="text-sm mt-2 text-red-500">{error()}</div>}
+            {result() && <div class="text-sm mt-2 text-green-500">{result()}</div>}
           </div>
           <div 
             class="flex flex-col items-center"
             >
             <button type="submit"
               onClick={resetPassword}
-              disabled={!email() || !!error()}
+              disabled={!email() || !!formError()}
               class="flex items-center justify-center rounded-full text-white font-display bg-indigo-500 w-full my-4 py-3 disabled:bg-indigo-300 hover:bg-indigo-600 transition duration-300"
               >
               Send password reset link
             </button>
-            {result() && <div class="text-sm text-green-500 self-center">{result()}</div>}
           </div>
         </form>
       </div>
